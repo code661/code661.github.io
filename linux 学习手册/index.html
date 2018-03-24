@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="linux 学习手册它的发展历史123456789101112131415app = Flask(__name__)app.config.from_object(__name__)flask_db = FlaskDB(app)database = flask_db.databaseoembed_providers = bootstrap_basic(OEmbedCache())@app.templ">
+    <meta name="description" content="极客角最后，还有一种标记可以用来添加示例代码或原始源代码。前者对于编写技术文档而言必不可少，而后者则是真正高级的东西，通过它您可以添加导出过程中将要执行的代码。您还可以插入由两种代码组成的整个段落。此处为一个真正高级的 Swift 代码示例 – 基于 GPL 发放： 123456class hello(object):    __init__    self.name = name    def">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux 学习手册">
 <meta property="og:url" content="http://yoursite.com/linux 学习手册/index.html">
 <meta property="og:site_name" content="认真一点">
-<meta property="og:description" content="linux 学习手册它的发展历史123456789101112131415app = Flask(__name__)app.config.from_object(__name__)flask_db = FlaskDB(app)database = flask_db.databaseoembed_providers = bootstrap_basic(OEmbedCache())@app.templ">
-<meta property="og:updated_time" content="2018-03-24T13:15:21.896Z">
+<meta property="og:description" content="极客角最后，还有一种标记可以用来添加示例代码或原始源代码。前者对于编写技术文档而言必不可少，而后者则是真正高级的东西，通过它您可以添加导出过程中将要执行的代码。您还可以插入由两种代码组成的整个段落。此处为一个真正高级的 Swift 代码示例 – 基于 GPL 发放： 123456class hello(object):    __init__    self.name = name    def">
+<meta property="og:updated_time" content="2018-03-24T14:55:43.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 学习手册">
-<meta name="twitter:description" content="linux 学习手册它的发展历史123456789101112131415app = Flask(__name__)app.config.from_object(__name__)flask_db = FlaskDB(app)database = flask_db.databaseoembed_providers = bootstrap_basic(OEmbedCache())@app.templ">
+<meta name="twitter:description" content="极客角最后，还有一种标记可以用来添加示例代码或原始源代码。前者对于编写技术文档而言必不可少，而后者则是真正高级的东西，通过它您可以添加导出过程中将要执行的代码。您还可以插入由两种代码组成的整个段落。此处为一个真正高级的 Swift 代码示例 – 基于 GPL 发放： 123456class hello(object):    __init__    self.name = name    def">
     
     
         
@@ -93,7 +93,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux-学习手册"><span class="toc-number">1.</span> <span class="toc-text">linux 学习手册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#它的发展历史"><span class="toc-number">1.1.</span> <span class="toc-text">它的发展历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一条命令"><span class="toc-number">1.1.1.</span> <span class="toc-text">第一条命令</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#极客角"><span class="toc-number">1.</span> <span class="toc-text">极客角</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -127,8 +127,30 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h1 id="linux-学习手册"><a href="#linux-学习手册" class="headerlink" title="linux 学习手册"></a>linux 学习手册</h1><h2 id="它的发展历史"><a href="#它的发展历史" class="headerlink" title="它的发展历史"></a>它的发展历史</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">app = Flask(__name__)</span><br><span class="line">app.config.from_object(__name__)</span><br><span class="line"></span><br><span class="line">flask_db = FlaskDB(app)</span><br><span class="line">database = flask_db.database</span><br><span class="line"></span><br><span class="line">oembed_providers = bootstrap_basic(OEmbedCache())</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.template_filter('clean_querystring')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">clean_qureystring</span><span class="params">(request_args, *keys_to_remove, **new_values)</span>:</span></span><br><span class="line">    querystring = dict((key, value) <span class="keyword">for</span> key, value <span class="keyword">in</span> request_args.items())</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> keys_to_remove:</span><br><span class="line">        querystring.pop(key, <span class="keyword">None</span>)</span><br><span class="line">    querystring.update(new_values)</span><br><span class="line">    <span class="keyword">return</span> urllib.urlencode(querystring)</span><br></pre></td></tr></table></figure>
-<h3 id="第一条命令"><a href="#第一条命令" class="headerlink" title="第一条命令"></a>第一条命令</h3><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install python3</span><br></pre></td></tr></table></figure>
+    <h2 id="极客角"><a href="#极客角" class="headerlink" title="极客角"></a>极客角</h2><p>最后，还有一种标记可以用来添加<code>示例代码</code>或原始源代码。前者对于编写技术文档而言必不可少，而后者则是真正高级的东西，通过它您可以添加导出过程中将要执行的代码。<br>您还可以插入由两种代码组成的整个段落。此处为一个真正高级的 Swift 代码示例 – 基于 GPL 发放：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">hello</span><span class="params">(object)</span>:</span></span><br><span class="line">    __init__</span><br><span class="line">    self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_hello</span><span class="params">(username)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'hello'</span> % username)</span><br></pre></td></tr></table></figure>
+<p>此处为原始源块的示例，将其导出为 HTML 时会插入一个表中（将其导出为 PDF 时会直接消失）：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myString = <span class="string">"您真美丽多彩。"</span></span><br><span class="line"><span class="built_in">print</span>(“您好，世界。” + myString)</span><br></pre></td></tr></table></figure>
+<p><strong>我们来</strong><br><strong>wo</strong><br><em>再来</em><br><del>去掉它</del></p>
+<p>我们加一个todo</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 苹果</li>
+<li style="list-style: none"><input type="checkbox"> 香蕉</li>
+</ul>
+<p><a href="http://dgtle.com" target="_blank" rel="noopener">我们添加一个链接</a></p>
+<blockquote>
+<p>引用一下咯</p>
+</blockquote>
+<ul>
+<li>无序的</li>
+<li>列表</li>
+</ul>
+<p>有序列表</p>
+<ol>
+<li>加油</li>
+<li>买东西</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install python</span><br></pre></td></tr></table></figure>
 
   </div>
 </article>
@@ -153,7 +175,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux-学习手册"><span class="toc-number">1.</span> <span class="toc-text">linux 学习手册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#它的发展历史"><span class="toc-number">1.1.</span> <span class="toc-text">它的发展历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一条命令"><span class="toc-number">1.1.1.</span> <span class="toc-text">第一条命令</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#极客角"><span class="toc-number">1.</span> <span class="toc-text">极客角</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
