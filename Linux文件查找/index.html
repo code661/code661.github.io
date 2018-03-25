@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Linux 文件查找的小总结whereis 简单快速locatewhichfind 命令标准格式：1find &amp;lt;path&amp;gt; &amp;lt;expression&amp;gt; &amp;lt;cmd&amp;gt;  path：所要搜索的目录及其所有子目录，默认为当前目录。 expression：所要搜索的文件的特征。 cmd：对搜索结果进行特定的处理。">
+    <meta name="description" content="Linux 文件查找的小总结whereis 简单快速locatewhichfind 命令标准格式：find &amp;lt;path&amp;gt; &amp;lt;expression&amp;gt; &amp;lt;cmd&amp;gt;  path：所要搜索的目录及其所有子目录，默认为当前目录。 expression：所要搜索的文件的特征。 cmd：对搜索结果进行特定的处理。">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux文件的查找">
 <meta property="og:url" content="http://yoursite.com/Linux文件查找/index.html">
 <meta property="og:site_name" content="认真一点">
-<meta property="og:description" content="Linux 文件查找的小总结whereis 简单快速locatewhichfind 命令标准格式：1find &amp;lt;path&amp;gt; &amp;lt;expression&amp;gt; &amp;lt;cmd&amp;gt;  path：所要搜索的目录及其所有子目录，默认为当前目录。 expression：所要搜索的文件的特征。 cmd：对搜索结果进行特定的处理。">
-<meta property="og:updated_time" content="2018-03-24T18:36:49.905Z">
+<meta property="og:description" content="Linux 文件查找的小总结whereis 简单快速locatewhichfind 命令标准格式：find &amp;lt;path&amp;gt; &amp;lt;expression&amp;gt; &amp;lt;cmd&amp;gt;  path：所要搜索的目录及其所有子目录，默认为当前目录。 expression：所要搜索的文件的特征。 cmd：对搜索结果进行特定的处理。">
+<meta property="og:updated_time" content="2018-03-25T13:08:53.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux文件的查找">
-<meta name="twitter:description" content="Linux 文件查找的小总结whereis 简单快速locatewhichfind 命令标准格式：1find &amp;lt;path&amp;gt; &amp;lt;expression&amp;gt; &amp;lt;cmd&amp;gt;  path：所要搜索的目录及其所有子目录，默认为当前目录。 expression：所要搜索的文件的特征。 cmd：对搜索结果进行特定的处理。">
+<meta name="twitter:description" content="Linux 文件查找的小总结whereis 简单快速locatewhichfind 命令标准格式：find &amp;lt;path&amp;gt; &amp;lt;expression&amp;gt; &amp;lt;cmd&amp;gt;  path：所要搜索的目录及其所有子目录，默认为当前目录。 expression：所要搜索的文件的特征。 cmd：对搜索结果进行特定的处理。">
     
     
         
@@ -66,8 +66,8 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" href="/What-in-my-Mac/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        <li><a class="icon" href="/What-in-my-Mac/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -133,7 +133,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h1 id="Linux-文件查找的小总结"><a href="#Linux-文件查找的小总结" class="headerlink" title="Linux 文件查找的小总结"></a>Linux 文件查找的小总结</h1><h2 id="whereis-简单快速"><a href="#whereis-简单快速" class="headerlink" title="whereis 简单快速"></a><code>whereis</code> 简单快速</h2><h2 id="locate"><a href="#locate" class="headerlink" title="locate"></a><code>locate</code></h2><h2 id="which"><a href="#which" class="headerlink" title="which"></a><code>which</code></h2><h2 id="find-命令"><a href="#find-命令" class="headerlink" title="find 命令"></a><code>find</code> 命令</h2><p>标准格式：<br><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find &lt;path&gt; &lt;expression&gt; &lt;cmd&gt;</span><br></pre></td></tr></table></figure></p>
+    <h1 id="Linux-文件查找的小总结"><a href="#Linux-文件查找的小总结" class="headerlink" title="Linux 文件查找的小总结"></a>Linux 文件查找的小总结</h1><h2 id="whereis-简单快速"><a href="#whereis-简单快速" class="headerlink" title="whereis 简单快速"></a><code>whereis</code> 简单快速</h2><h2 id="locate"><a href="#locate" class="headerlink" title="locate"></a><code>locate</code></h2><h2 id="which"><a href="#which" class="headerlink" title="which"></a><code>which</code></h2><h2 id="find-命令"><a href="#find-命令" class="headerlink" title="find 命令"></a><code>find</code> 命令</h2><p>标准格式：<br><figure class="highlight zsh"><table><tr><td class="code"><pre><span class="line">find &lt;path&gt; &lt;expression&gt; &lt;cmd&gt;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>path：所要搜索的目录及其所有子目录，默认为当前目录。</li>
 <li>expression：所要搜索的文件的特征。</li>
