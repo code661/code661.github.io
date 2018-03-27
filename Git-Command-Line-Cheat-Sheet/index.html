@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Git 常用命令小本本目的是记录下，日常开会经常要用到的 git 命令，忘记了就来这里翻小本本。 git init 初始化仓库 正常情况将返回 Initialized empty Git repository 告诉我们，一个新的空仓库为您准备好啦 🎉 如果将一个已经存在的仓库再执行这条命令，将提示 Reinitialized existing Git repository ... 重新初始化已存">
+<meta name="keywords" content="开发工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git 常用命令小本本">
+<meta property="og:url" content="http://yoursite.com/Git-Command-Line-Cheat-Sheet/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="Git 常用命令小本本目的是记录下，日常开会经常要用到的 git 命令，忘记了就来这里翻小本本。 git init 初始化仓库 正常情况将返回 Initialized empty Git repository 告诉我们，一个新的空仓库为您准备好啦 🎉 如果将一个已经存在的仓库再执行这条命令，将提示 Reinitialized existing Git repository ... 重新初始化已存">
+<meta property="og:image" content="http://p66qa9vy4.bkt.clouddn.com/15221155243249.jpg">
+<meta property="og:image" content="http://p66qa9vy4.bkt.clouddn.com/15221120156735.jpg">
+<meta property="og:image" content="http://p66qa9vy4.bkt.clouddn.com/15221120383827.jpg">
+<meta property="og:updated_time" content="2018-03-27T02:06:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git 常用命令小本本">
+<meta name="twitter:description" content="Git 常用命令小本本目的是记录下，日常开会经常要用到的 git 命令，忘记了就来这里翻小本本。 git init 初始化仓库 正常情况将返回 Initialized empty Git repository 告诉我们，一个新的空仓库为您准备好啦 🎉 如果将一个已经存在的仓库再执行这条命令，将提示 Reinitialized existing Git repository ... 重新初始化已存">
+<meta name="twitter:image" content="http://p66qa9vy4.bkt.clouddn.com/15221155243249.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Git 常用命令小本本</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/My-Ubuntu-Server-Setup/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/Git-Command-Line-Cheat-Sheet/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&text=Git 常用命令小本本"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&is_video=false&description=Git 常用命令小本本"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git 常用命令小本本&body=Check out this article: http://yoursite.com/Git-Command-Line-Cheat-Sheet/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&name=Git 常用命令小本本&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-常用命令小本本"><span class="toc-number">1.</span> <span class="toc-text">Git 常用命令小本本</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#git-init-初始化仓库"><span class="toc-number">1.1.</span> <span class="toc-text">git init 初始化仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-clone-克隆远程仓库"><span class="toc-number">1.2.</span> <span class="toc-text">git clone 克隆远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-add-把文件添加到仓库"><span class="toc-number">1.3.</span> <span class="toc-text">git add 把文件添加到仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-status-查看仓库的状态"><span class="toc-number">1.4.</span> <span class="toc-text">git status 查看仓库的状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-diff-比对已被修改的文件，前后版本的差异"><span class="toc-number">1.5.</span> <span class="toc-text">git diff 比对已被修改的文件，前后版本的差异</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-commit-把文件提交到仓库"><span class="toc-number">1.6.</span> <span class="toc-text">git commit 把文件提交到仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-reset"><span class="toc-number">1.7.</span> <span class="toc-text">git reset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-log-amp-git-reflog-查看提交历史"><span class="toc-number">1.8.</span> <span class="toc-text">git log &amp; git reflog 查看提交历史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-checkout-用版本库里的版本替换工作区的版本"><span class="toc-number">1.9.</span> <span class="toc-text">git checkout 用版本库里的版本替换工作区的版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-pull"><span class="toc-number">1.10.</span> <span class="toc-text">git pull</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-remote-标签管理"><span class="toc-number">1.11.</span> <span class="toc-text">git remote 标签管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-push-推送到远程仓库"><span class="toc-number">1.12.</span> <span class="toc-text">git push 推送到远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-branch-新增-amp-查看分支操作"><span class="toc-number">1.13.</span> <span class="toc-text">git branch 新增 &amp; 查看分支操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-merge-合并某分支到当前分支"><span class="toc-number">1.14.</span> <span class="toc-text">git merge 合并某分支到当前分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何修复冲突"><span class="toc-number">1.15.</span> <span class="toc-text">如何修复冲突</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支的意义"><span class="toc-number">1.16.</span> <span class="toc-text">分支的意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-目录下的文件的三种状态"><span class="toc-number">1.17.</span> <span class="toc-text">git 目录下的文件的三种状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-暂存区概念的理解"><span class="toc-number">1.18.</span> <span class="toc-text">git 暂存区概念的理解</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Git 常用命令小本本
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">认真一点</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-03-27T01:57:24.000Z" itemprop="datePublished">2018-03-27</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/开发工具/">开发工具</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Git-常用命令小本本"><a href="#Git-常用命令小本本" class="headerlink" title="Git 常用命令小本本"></a>Git 常用命令小本本</h1><p>目的是记录下，日常开会经常要用到的 git 命令，忘记了就来这里翻小本本。</p>
+<h2 id="git-init-初始化仓库"><a href="#git-init-初始化仓库" class="headerlink" title="git init 初始化仓库"></a><code>git init</code> 初始化仓库</h2><ul>
+<li>正常情况将返回 <code>Initialized empty Git repository</code> 告诉我们，一个新的空仓库为您准备好啦 🎉</li>
+<li>如果将一个已经存在的仓库再执行这条命令，将提示 <code>Reinitialized existing Git repository ...</code> 重新初始化已存在的仓库。</li>
+<li>将在添加一个 <code>.git</code> 的目录，这个目录是Git来跟踪管理版本库的。</li>
+</ul>
+<h2 id="git-clone-克隆远程仓库"><a href="#git-clone-克隆远程仓库" class="headerlink" title="git clone 克隆远程仓库"></a><code>git clone</code> 克隆远程仓库</h2><p>☁️  — &gt;   💻</p>
+<p>克隆，复制一份一模一样的仓库</p>
+<h2 id="git-add-把文件添加到仓库"><a href="#git-add-把文件添加到仓库" class="headerlink" title="git add 把文件添加到仓库"></a><code>git add</code> 把文件添加到仓库</h2><p>可反复多次使用，添加多个文件。</p>
+<h2 id="git-status-查看仓库的状态"><a href="#git-status-查看仓库的状态" class="headerlink" title="git status 查看仓库的状态"></a><code>git status</code> 查看仓库的状态</h2><p>输入这个命令后，会有三种不同状态提示</p>
+<ol>
+<li>所有文件状态和远程仓库相同</li>
+<li>有修改的文件，已经提交到了本地仓库的<strong>暂缓区</strong> </li>
+<li>有新添加的文件或有被修改的文件，还未被做过任何处理。会提示</li>
+</ol>
+<h2 id="git-diff-比对已被修改的文件，前后版本的差异"><a href="#git-diff-比对已被修改的文件，前后版本的差异" class="headerlink" title="git diff 比对已被修改的文件，前后版本的差异"></a><code>git diff</code> 比对已被修改的文件，前后版本的差异</h2><h2 id="git-commit-把文件提交到仓库"><a href="#git-commit-把文件提交到仓库" class="headerlink" title="git commit 把文件提交到仓库"></a><code>git commit</code> 把文件提交到仓库</h2><ul>
+<li>-m 后面输入一段字符串，是本次提交的说明</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git commit -m &lt;description&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a><code>git reset</code></h2><ul>
+<li>已暂存的文件取回工作区</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset HEAD &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在分支中，设置指针指向那个版本。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --hard &lt;commit_id&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="git-log-amp-git-reflog-查看提交历史"><a href="#git-log-amp-git-reflog-查看提交历史" class="headerlink" title="git log &amp; git reflog 查看提交历史"></a><code>git log</code> &amp; <code>git reflog</code> 查看提交历史</h2><p>这个可以用与查看各个版本的 <code>&lt;commit_id&gt;</code> 来进行退回操作</p>
+<h2 id="git-checkout-用版本库里的版本替换工作区的版本"><a href="#git-checkout-用版本库里的版本替换工作区的版本" class="headerlink" title="git checkout 用版本库里的版本替换工作区的版本"></a><code>git checkout</code> 用版本库里的版本替换工作区的版本</h2><ul>
+<li>已修改的文件，退回修改之前版本</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout -- &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>切换当前分支</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout &lt;branch_name&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a><code>git pull</code></h2><h2 id="git-remote-标签管理"><a href="#git-remote-标签管理" class="headerlink" title="git remote 标签管理"></a><code>git remote</code> 标签管理</h2><p><code>add</code> 命令：添加一个远程库的标签。可以方便的向不同的远程仓库来push<br><code>set-url</code> 命令：修改某个远程仓库标签对于的地址</p>
+<h2 id="git-push-推送到远程仓库"><a href="#git-push-推送到远程仓库" class="headerlink" title="git push 推送到远程仓库"></a><code>git push</code> 推送到远程仓库</h2><p>-f 参数：强制推送，会覆盖远程仓库中的代码</p>
+<h2 id="git-branch-新增-amp-查看分支操作"><a href="#git-branch-新增-amp-查看分支操作" class="headerlink" title="git branch 新增 &amp; 查看分支操作"></a><code>git branch</code> 新增 &amp; 查看分支操作</h2><h2 id="git-merge-合并某分支到当前分支"><a href="#git-merge-合并某分支到当前分支" class="headerlink" title="git merge 合并某分支到当前分支"></a><code>git merge</code> 合并某分支到当前分支</h2><h2 id="如何修复冲突"><a href="#如何修复冲突" class="headerlink" title="如何修复冲突"></a>如何修复冲突</h2><p>假设的情况是这样子：大家共同开发一个项目，同事那边先修改了文件，并且push到了远程仓库。我在他之后，把我本地仓库一相同文件也修改了，当我再进行<code>push</code>时到远程仓库，Git 就会报错。因为有两个修改，它不知道要如何来决定。</p>
+<p>需要先 <code>pull</code>，然后git会把需要解决冲突的地方标记。让自己手动进行一个合并</p>
+<h2 id="分支的意义"><a href="#分支的意义" class="headerlink" title="分支的意义"></a>分支的意义</h2><p><img src="http://p66qa9vy4.bkt.clouddn.com/15221155243249.jpg" alt=""><br>Git分支十分强大，在团队开发中应该充分应用。</p>
+<h2 id="git-目录下的文件的三种状态"><a href="#git-目录下的文件的三种状态" class="headerlink" title="git 目录下的文件的三种状态"></a>git 目录下的文件的三种状态</h2><ul>
+<li>已提交（mommitted）</li>
+<li>已修改（mofified）</li>
+<li>已暂存（staged）</li>
+</ul>
+<h2 id="git-暂存区概念的理解"><a href="#git-暂存区概念的理解" class="headerlink" title="git 暂存区概念的理解"></a>git 暂存区概念的理解</h2><blockquote>
+<p><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支。</p>
+</blockquote>
+<p><img src="http://p66qa9vy4.bkt.clouddn.com/15221120156735.jpg" alt=""><br><img src="http://p66qa9vy4.bkt.clouddn.com/15221120383827.jpg" alt=""></p>
+<hr>
+<p>参考链接<br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰 Git 教程</a></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-常用命令小本本"><span class="toc-number">1.</span> <span class="toc-text">Git 常用命令小本本</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#git-init-初始化仓库"><span class="toc-number">1.1.</span> <span class="toc-text">git init 初始化仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-clone-克隆远程仓库"><span class="toc-number">1.2.</span> <span class="toc-text">git clone 克隆远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-add-把文件添加到仓库"><span class="toc-number">1.3.</span> <span class="toc-text">git add 把文件添加到仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-status-查看仓库的状态"><span class="toc-number">1.4.</span> <span class="toc-text">git status 查看仓库的状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-diff-比对已被修改的文件，前后版本的差异"><span class="toc-number">1.5.</span> <span class="toc-text">git diff 比对已被修改的文件，前后版本的差异</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-commit-把文件提交到仓库"><span class="toc-number">1.6.</span> <span class="toc-text">git commit 把文件提交到仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-reset"><span class="toc-number">1.7.</span> <span class="toc-text">git reset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-log-amp-git-reflog-查看提交历史"><span class="toc-number">1.8.</span> <span class="toc-text">git log &amp; git reflog 查看提交历史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-checkout-用版本库里的版本替换工作区的版本"><span class="toc-number">1.9.</span> <span class="toc-text">git checkout 用版本库里的版本替换工作区的版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-pull"><span class="toc-number">1.10.</span> <span class="toc-text">git pull</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-remote-标签管理"><span class="toc-number">1.11.</span> <span class="toc-text">git remote 标签管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-push-推送到远程仓库"><span class="toc-number">1.12.</span> <span class="toc-text">git push 推送到远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-branch-新增-amp-查看分支操作"><span class="toc-number">1.13.</span> <span class="toc-text">git branch 新增 &amp; 查看分支操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-merge-合并某分支到当前分支"><span class="toc-number">1.14.</span> <span class="toc-text">git merge 合并某分支到当前分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何修复冲突"><span class="toc-number">1.15.</span> <span class="toc-text">如何修复冲突</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支的意义"><span class="toc-number">1.16.</span> <span class="toc-text">分支的意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-目录下的文件的三种状态"><span class="toc-number">1.17.</span> <span class="toc-text">git 目录下的文件的三种状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-暂存区概念的理解"><span class="toc-number">1.18.</span> <span class="toc-text">git 暂存区概念的理解</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/Git-Command-Line-Cheat-Sheet/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&text=Git 常用命令小本本"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&is_video=false&description=Git 常用命令小本本"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git 常用命令小本本&body=Check out this article: http://yoursite.com/Git-Command-Line-Cheat-Sheet/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&title=Git 常用命令小本本"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/Git-Command-Line-Cheat-Sheet/&name=Git 常用命令小本本&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 tan61
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
