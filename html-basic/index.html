@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="HTML 基础什么是HTML？超文本标记语言(Hypertext Markup Lauguage,HTML)是一个可以用结构化 Web 内容并给予其含义和目标的编码语言。 它由一系列的元素（elements）所组成，不同的元素各有功用。 元素&amp;lt;p class=&amp;quot;greeting&amp;quot;&amp;gt;Hello, World!&amp;lt;/p&amp;gt; 元素由一个开始的 标签 和结束的标签组">
+<meta name="keywords" content="HTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML 基础">
+<meta property="og:url" content="http://yoursite.com/html-basic/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="HTML 基础什么是HTML？超文本标记语言(Hypertext Markup Lauguage,HTML)是一个可以用结构化 Web 内容并给予其含义和目标的编码语言。 它由一系列的元素（elements）所组成，不同的元素各有功用。 元素&amp;lt;p class=&amp;quot;greeting&amp;quot;&amp;gt;Hello, World!&amp;lt;/p&amp;gt; 元素由一个开始的 标签 和结束的标签组">
+<meta property="og:image" content="http://yoursite.com/html-basic/media/15221483759617/grumpy-cat-attribute-small.png">
+<meta property="og:image" content="http://yoursite.com/html-basic/media/15221483759617/grumpy-cat-small.png">
+<meta property="og:updated_time" content="2018-03-29T13:10:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML 基础">
+<meta name="twitter:description" content="HTML 基础什么是HTML？超文本标记语言(Hypertext Markup Lauguage,HTML)是一个可以用结构化 Web 内容并给予其含义和目标的编码语言。 它由一系列的元素（elements）所组成，不同的元素各有功用。 元素&amp;lt;p class=&amp;quot;greeting&amp;quot;&amp;gt;Hello, World!&amp;lt;/p&amp;gt; 元素由一个开始的 标签 和结束的标签组">
+<meta name="twitter:image" content="http://yoursite.com/html-basic/media/15221483759617/grumpy-cat-attribute-small.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>HTML 基础</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/html-header/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/html-basic/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/html-basic/&text=HTML 基础"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/html-basic/&is_video=false&description=HTML 基础"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=HTML 基础&body=Check out this article: http://yoursite.com/html-basic/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/html-basic/&name=HTML 基础&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-基础"><span class="toc-number">1.</span> <span class="toc-text">HTML 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是HTML？"><span class="toc-number">1.1.</span> <span class="toc-text">什么是HTML？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素"><span class="toc-number">1.2.</span> <span class="toc-text">元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#块级元素-amp-内联元素"><span class="toc-number">1.3.</span> <span class="toc-text">块级元素 &amp; 内联元素</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        HTML 基础
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">认真一点</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-03-29T13:03:17.000Z" itemprop="datePublished">2018-03-29</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/HTML/">HTML</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="HTML-基础"><a href="#HTML-基础" class="headerlink" title="HTML 基础"></a>HTML 基础</h1><h2 id="什么是HTML？"><a href="#什么是HTML？" class="headerlink" title="什么是HTML？"></a>什么是HTML？</h2><p>超文本标记语言(Hypertext Markup Lauguage,HTML)是一个可以用结构化 Web 内容并给予其含义和目标的编码语言。</p>
+<p>它由一系列的元素（elements）所组成，不同的元素各有功用。</p>
+<h2 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;p class=&quot;greeting&quot;&gt;Hello, World!&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>元素由一个开始的 <strong>标签</strong> 和结束的标签组成，中间用来包含内容<br>元素的开标前可以带有一些 <strong>属性（attribute）</strong></p>
+<blockquote>
+<p>属性：在开标签，提供关于该元素的更多信息，属性由属性名和随后的属性值组成。赋予元素意义和语境。</p>
+</blockquote>
+<p><img src="media/15221483759617/grumpy-cat-attribute-small.png" alt="grumpy-cat-attribute-smal"></p>
+<p><img src="media/15221483759617/grumpy-cat-small.png" alt="grumpy-cat-smal"></p>
+<blockquote>
+<p>全局属性：是所有HTML元素共有的属性; 它们可以用于所有元素，尽管属性可能对某些元素没有影响。<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes" target="_blank" rel="noopener">全局属性-MDN</a></p>
+</blockquote>
+<h2 id="块级元素-amp-内联元素"><a href="#块级元素-amp-内联元素" class="headerlink" title="块级元素 &amp; 内联元素"></a>块级元素 &amp; 内联元素</h2><ul>
+<li>块级元素（比如标题和段落）会相互堆叠在一起沿页面向下排列，每个元素分别占一行。</li>
+<li>行内元素（比如链接和图片）则会相互并列，只有在空间不足以并列的情况下才会折到下一行显示。</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-基础"><span class="toc-number">1.</span> <span class="toc-text">HTML 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是HTML？"><span class="toc-number">1.1.</span> <span class="toc-text">什么是HTML？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素"><span class="toc-number">1.2.</span> <span class="toc-text">元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#块级元素-amp-内联元素"><span class="toc-number">1.3.</span> <span class="toc-text">块级元素 &amp; 内联元素</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/html-basic/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/html-basic/&text=HTML 基础"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/html-basic/&is_video=false&description=HTML 基础"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=HTML 基础&body=Check out this article: http://yoursite.com/html-basic/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/html-basic/&title=HTML 基础"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/html-basic/&name=HTML 基础&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 tan61
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="#从URL输入到页面展现 by 若愚@饥人谷 第一步. 在浏览器输入URLURL是什么  URL: 统一资源定位符，用于定位互联网上的资源 http、https、ftp、file 协议   http://jirengu.com/blogfile:///Users/hunger/workspace/a.htmlhttps://10.245.23.456:3000/users//jirengu.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="输入到页面展现">
+<meta property="og:url" content="http://yoursite.com/what-happen-when-broswer-enter-a-url/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="#从URL输入到页面展现 by 若愚@饥人谷 第一步. 在浏览器输入URLURL是什么  URL: 统一资源定位符，用于定位互联网上的资源 http、https、ftp、file 协议   http://jirengu.com/blogfile:///Users/hunger/workspace/a.htmlhttps://10.245.23.456:3000/users//jirengu.com">
+<meta property="og:image" content="http://7xpvnv.com2.z0.glb.qiniucdn.com/ddc261f1-3495-4225-98e8-6282f6eee422.png">
+<meta property="og:image" content="http://7xpvnv.com2.z0.glb.qiniucdn.com/26373b7e-83c5-41f3-bb33-c614fb8a37fd.png">
+<meta property="og:updated_time" content="2018-03-29T13:10:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="输入到页面展现">
+<meta name="twitter:description" content="#从URL输入到页面展现 by 若愚@饥人谷 第一步. 在浏览器输入URLURL是什么  URL: 统一资源定位符，用于定位互联网上的资源 http、https、ftp、file 协议   http://jirengu.com/blogfile:///Users/hunger/workspace/a.htmlhttps://10.245.23.456:3000/users//jirengu.com">
+<meta name="twitter:image" content="http://7xpvnv.com2.z0.glb.qiniucdn.com/ddc261f1-3495-4225-98e8-6282f6eee422.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>输入到页面展现</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/html-header/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/Git-Command-Line-Cheat-Sheet/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/what-happen-when-broswer-enter-a-url/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&text=输入到页面展现"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&is_video=false&description=输入到页面展现"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=输入到页面展现&body=Check out this article: http://yoursite.com/what-happen-when-broswer-enter-a-url/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&name=输入到页面展现&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-在浏览器输入URL"><span class="toc-number">1.</span> <span class="toc-text">第一步. 在浏览器输入URL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#URL是什么"><span class="toc-number">1.1.</span> <span class="toc-text">URL是什么</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-域名解析"><span class="toc-number">2.</span> <span class="toc-text">第二步. 域名解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#域名是什么"><span class="toc-number">2.1.</span> <span class="toc-text">域名是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP地址是什么"><span class="toc-number">2.2.</span> <span class="toc-text">IP地址是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名解析的流程"><span class="toc-number">2.3.</span> <span class="toc-text">域名解析的流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步-服务器处理"><span class="toc-number">3.</span> <span class="toc-text">第三步. 服务器处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Web服务器"><span class="toc-number">3.1.</span> <span class="toc-text">Web服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四步-网站处理流程"><span class="toc-number">4.</span> <span class="toc-text">第四步. 网站处理流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器处理"><span class="toc-number">5.</span> <span class="toc-text">浏览器处理</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        输入到页面展现
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">认真一点</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-03-28T13:03:17.000Z" itemprop="datePublished">2018-03-28</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>#从URL输入到页面展现</p>
+<p>by 若愚@<a href="http://jirengu.com" target="_blank" rel="noopener">饥人谷</a></p>
+<h2 id="第一步-在浏览器输入URL"><a href="#第一步-在浏览器输入URL" class="headerlink" title="第一步. 在浏览器输入URL"></a>第一步. 在浏览器输入URL</h2><h3 id="URL是什么"><a href="#URL是什么" class="headerlink" title="URL是什么"></a>URL是什么</h3><blockquote>
+<ul>
+<li>URL: 统一资源定位符，用于定位互联网上的资源</li>
+<li>http、https、ftp、file 协议</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http://jirengu.com/blog</span><br><span class="line">file:///Users/hunger/workspace/a.html</span><br><span class="line">https://10.245.23.456:3000/users</span><br><span class="line">//jirengu.com/static/imgs/a.png</span><br></pre></td></tr></table></figure>
+<h2 id="第二步-域名解析"><a href="#第二步-域名解析" class="headerlink" title="第二步. 域名解析"></a>第二步. 域名解析</h2><p>对于 <code>http://jirengu.com</code>的URL，浏览器实际上不知道 <code>jirengu.com</code>到底是什么东西，需要查找<code>jirengu.com</code>网站所在服务器的IP地址，才能找到目标</p>
+<blockquote>
+<ol>
+<li>为什么要发明域名，不直接用IP?</li>
+</ol>
+</blockquote>
+<h3 id="域名是什么"><a href="#域名是什么" class="headerlink" title="域名是什么"></a>域名是什么</h3><p>对于<code>http://jirengu.com:8080/blog</code> , <code>jirengu.com</code>就是域名</p>
+<h3 id="IP地址是什么"><a href="#IP地址是什么" class="headerlink" title="IP地址是什么"></a>IP地址是什么</h3><ul>
+<li>每个处于互联网中的设备都有IP 地址，形如 <code>192.168.0.1</code></li>
+<li>局域网 IP 和公网 IP 是有差别的</li>
+<li><code>127.0.0.1</code>代表本机的 IP</li>
+</ul>
+<h3 id="域名解析的流程"><a href="#域名解析的流程" class="headerlink" title="域名解析的流程"></a>域名解析的流程</h3><ol>
+<li>浏览器缓存 – 浏览器会缓存DNS记录一段时间 </li>
+<li>系统缓存 - 从 Hosts 文件查找是否有该域名和对应 IP。</li>
+<li>路由器缓存 – 一般路由器也会缓存域名信息。</li>
+<li>ISP DNS 缓存 – 比如到电信的 DNS 上查找缓存。</li>
+<li>如果都没有找到，则向根域名服务器查找域名对应 IP，根域名服务器把请求转发到下一级，知道找到 IP</li>
+</ol>
+<blockquote>
+<ol>
+<li>电脑上不了网，为什么修改dns为8.8.8.8 或者114.114.114.114?</li>
+<li>dns 劫持是什么？</li>
+</ol>
+</blockquote>
+<h2 id="第三步-服务器处理"><a href="#第三步-服务器处理" class="headerlink" title="第三步. 服务器处理"></a>第三步. 服务器处理</h2><p>服务器是一台安装系统的机器，常见的系统如Linux、windows server 2012</p>
+<p>系统里安装的处理请求的应用叫 Web server</p>
+<h3 id="Web服务器"><a href="#Web服务器" class="headerlink" title="Web服务器"></a>Web服务器</h3><ul>
+<li>常见的 web服务器有 Apache、Nginx、IIS、Lighttpd</li>
+<li>web服务器接收用户的Request 交给网站代码，或者接受请求反向代理到其他 web服务器</li>
+</ul>
+<p><img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/ddc261f1-3495-4225-98e8-6282f6eee422.png" alt="web服务器.png"> </p>
+<h2 id="第四步-网站处理流程"><a href="#第四步-网站处理流程" class="headerlink" title="第四步. 网站处理流程"></a>第四步. 网站处理流程</h2><blockquote>
+<p>MVC 模型(model)-视图(view)-控制器(controller)</p>
+</blockquote>
+<p><img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/26373b7e-83c5-41f3-bb33-c614fb8a37fd.png" alt="rails_mvc"> </p>
+<ol>
+<li>浏览器向 /users 发送请求；</li>
+<li>Rails 的路由把 /users 交给 Users 控制器的 index 动作处理；</li>
+<li>index 动作要求 User 模型读取所有用户（User.all）；</li>
+<li>User 模型从数据库中读取所有用户；</li>
+<li>User 模型把所有用户组成的列表返回给控制器；</li>
+<li>控制器把所有用户赋值给 @users 变量，然后传入 index 视图；</li>
+<li>视图使用嵌入式 Ruby 把页面渲染成 HTML；</li>
+<li>控制器把 HTML 送回浏览器</li>
+</ol>
+<h2 id="浏览器处理"><a href="#浏览器处理" class="headerlink" title="浏览器处理"></a>浏览器处理</h2><ul>
+<li><p>HTML字符串被浏览器接受后被一句句读取解析</p>
+</li>
+<li><p>解析到link 标签后重新发送请求获取css</p>
+</li>
+<li><p>解析到 script标签后发送请求获取 js，并执行代码</p>
+</li>
+<li><p>解析到img 标签后发送请求获取图片资源</p>
+</li>
+<li><p>浏览器根据 HTML 和 CSS 计算得到渲染树，绘制到屏幕上</p>
+</li>
+<li><p>js 会被执行</p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-在浏览器输入URL"><span class="toc-number">1.</span> <span class="toc-text">第一步. 在浏览器输入URL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#URL是什么"><span class="toc-number">1.1.</span> <span class="toc-text">URL是什么</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-域名解析"><span class="toc-number">2.</span> <span class="toc-text">第二步. 域名解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#域名是什么"><span class="toc-number">2.1.</span> <span class="toc-text">域名是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP地址是什么"><span class="toc-number">2.2.</span> <span class="toc-text">IP地址是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名解析的流程"><span class="toc-number">2.3.</span> <span class="toc-text">域名解析的流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步-服务器处理"><span class="toc-number">3.</span> <span class="toc-text">第三步. 服务器处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Web服务器"><span class="toc-number">3.1.</span> <span class="toc-text">Web服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四步-网站处理流程"><span class="toc-number">4.</span> <span class="toc-text">第四步. 网站处理流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器处理"><span class="toc-number">5.</span> <span class="toc-text">浏览器处理</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/what-happen-when-broswer-enter-a-url/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&text=输入到页面展现"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&is_video=false&description=输入到页面展现"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=输入到页面展现&body=Check out this article: http://yoursite.com/what-happen-when-broswer-enter-a-url/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&title=输入到页面展现"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/what-happen-when-broswer-enter-a-url/&name=输入到页面展现&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 tan61
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
