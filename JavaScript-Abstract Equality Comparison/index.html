@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="JavaScript中的 a==b 运算JavaScript的数据类型涉及到了 JavaScript 中关于类型的知识，做一个简单的回顾：  JS中的值有两种类型：原始类型(Primitive)、对象类型(Object)。 原始类型包括：Undefined、Null、Boolean、Number和String等五种。 Undefined类型和Null类型的都只有一个值，即undefined和nul">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript中的 a==b 运算">
+<meta property="og:url" content="http://yoursite.com/JavaScript-Abstract Equality Comparison/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="JavaScript中的 a==b 运算JavaScript的数据类型涉及到了 JavaScript 中关于类型的知识，做一个简单的回顾：  JS中的值有两种类型：原始类型(Primitive)、对象类型(Object)。 原始类型包括：Undefined、Null、Boolean、Number和String等五种。 Undefined类型和Null类型的都只有一个值，即undefined和nul">
+<meta property="og:updated_time" content="2018-04-17T09:37:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript中的 a==b 运算">
+<meta name="twitter:description" content="JavaScript中的 a==b 运算JavaScript的数据类型涉及到了 JavaScript 中关于类型的知识，做一个简单的回顾：  JS中的值有两种类型：原始类型(Primitive)、对象类型(Object)。 原始类型包括：Undefined、Null、Boolean、Number和String等五种。 Undefined类型和Null类型的都只有一个值，即undefined和nul">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>JavaScript中的 a==b 运算</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/JavaScript-if(xx)/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/JavaScript-Abstract Equality Comparison/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&text=JavaScript中的 a==b 运算"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&is_video=false&description=JavaScript中的 a==b 运算"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JavaScript中的 a==b 运算&body=Check out this article: http://yoursite.com/JavaScript-Abstract Equality Comparison/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&name=JavaScript中的 a==b 运算&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript中的-a-b-运算"><span class="toc-number">1.</span> <span class="toc-text">JavaScript中的 a==b 运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript的数据类型"><span class="toc-number">1.1.</span> <span class="toc-text">JavaScript的数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#a-b-的运算符判断规则"><span class="toc-number">1.2.</span> <span class="toc-text">a == b 的运算符判断规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined-null"><span class="toc-number">1.2.1.</span> <span class="toc-text">undefined == null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Boolean"><span class="toc-number">1.2.2.</span> <span class="toc-text">String == Boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Boolean-Number"><span class="toc-number">1.2.3.</span> <span class="toc-text">String/Boolean == Number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-Primitive"><span class="toc-number">1.2.4.</span> <span class="toc-text">Object == Primitive</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        JavaScript中的 a==b 运算
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">认真一点</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-04-17T09:36:56.000Z" itemprop="datePublished">2018-04-17</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="JavaScript中的-a-b-运算"><a href="#JavaScript中的-a-b-运算" class="headerlink" title="JavaScript中的 a==b 运算"></a>JavaScript中的 a==b 运算</h1><h2 id="JavaScript的数据类型"><a href="#JavaScript的数据类型" class="headerlink" title="JavaScript的数据类型"></a>JavaScript的数据类型</h2><p>涉及到了 JavaScript 中关于类型的知识，做一个简单的回顾：</p>
+<ul>
+<li>JS中的值有两种类型：<strong>原始类型</strong>(Primitive)、<strong>对象类型</strong>(Object)。</li>
+<li>原始类型包括：Undefined、Null、Boolean、Number和String等五种。</li>
+<li>Undefined类型和Null类型的都只有一个值，即undefined和null；Boolea类型有两个值：true和false；Number类型的值有很多很多；String类型的值理论上有无数个。</li>
+<li>所有对象都有valueOf()和toString()方法，它们继承自Object，当然也可能被子类重写。</li>
+</ul>
+<h2 id="a-b-的运算符判断规则"><a href="#a-b-的运算符判断规则" class="headerlink" title="a == b 的运算符判断规则"></a>a == b 的运算符判断规则</h2><p>当a和b的类型相同时，<code>a == b</code>可以转化为严格相等的运算<code>a === b</code>，而后者是很简单的(唯一需要注意的可能是NaN)，所以<strong>下面只考虑x和y的类型不同的情况</strong>。</p>
+<h3 id="undefined-null"><a href="#undefined-null" class="headerlink" title="undefined == null"></a>undefined == null</h3><p>结果是true。且它俩与所有其他值比较的结果都是false。</p>
+<h3 id="String-Boolean"><a href="#String-Boolean" class="headerlink" title="String == Boolean"></a>String == Boolean</h3><p>需要两个操作数同时转为Number</p>
+<h3 id="String-Boolean-Number"><a href="#String-Boolean-Number" class="headerlink" title="String/Boolean == Number"></a>String/Boolean == Number</h3><p>需要String/Boolean转为Number。</p>
+<h3 id="Object-Primitive"><a href="#Object-Primitive" class="headerlink" title="Object == Primitive"></a>Object == Primitive</h3><p>需要Object转为Primitive(具体通过valueOf和toString方法)。</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript中的-a-b-运算"><span class="toc-number">1.</span> <span class="toc-text">JavaScript中的 a==b 运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript的数据类型"><span class="toc-number">1.1.</span> <span class="toc-text">JavaScript的数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#a-b-的运算符判断规则"><span class="toc-number">1.2.</span> <span class="toc-text">a == b 的运算符判断规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined-null"><span class="toc-number">1.2.1.</span> <span class="toc-text">undefined == null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Boolean"><span class="toc-number">1.2.2.</span> <span class="toc-text">String == Boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Boolean-Number"><span class="toc-number">1.2.3.</span> <span class="toc-text">String/Boolean == Number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-Primitive"><span class="toc-number">1.2.4.</span> <span class="toc-text">Object == Primitive</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/JavaScript-Abstract Equality Comparison/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&text=JavaScript中的 a==b 运算"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&is_video=false&description=JavaScript中的 a==b 运算"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JavaScript中的 a==b 运算&body=Check out this article: http://yoursite.com/JavaScript-Abstract Equality Comparison/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&title=JavaScript中的 a==b 运算"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/JavaScript-Abstract Equality Comparison/&name=JavaScript中的 a==b 运算&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 tan61
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'code661-github-io';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
