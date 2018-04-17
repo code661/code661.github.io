@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="认真一点">
 <meta property="og:description" content="if(xx) 判断规则JavaScript的条件语句if...else的语法格式为: if (condition)   statement1[else   statement2] 当指定条件(condition)内的值为真，if 语句会执行一段语句。如果条件为假，则执行另一段语句。括号内语句的值，如果是布尔类型则直接判断。但如果是其他类型的值，会被强制转换成布尔类型。转换时调用 [ToBoolea">
 <meta property="og:image" content="http://p66qa9vy4.bkt.clouddn.com/20180415152376231919735.png">
-<meta property="og:updated_time" content="2018-04-17T06:02:29.000Z">
+<meta property="og:updated_time" content="2018-04-17T06:12:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="if(xx)判断规则">
 <meta name="twitter:description" content="if(xx) 判断规则JavaScript的条件语句if...else的语法格式为: if (condition)   statement1[else   statement2] 当指定条件(condition)内的值为真，if 语句会执行一段语句。如果条件为假，则执行另一段语句。括号内语句的值，如果是布尔类型则直接判断。但如果是其他类型的值，会被强制转换成布尔类型。转换时调用 [ToBoolea">
@@ -140,7 +140,7 @@
 <p>当指定条件(condition)内的值为真，if 语句会执行一段语句。如果条件为假，则执行另一段语句。<br>括号内语句的值，<strong>如果是布尔类型则直接判断</strong>。但如果是其他类型的值，会被<strong>强制转换成布尔类型</strong>。转换时调用 [ToBoolean] (<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-9.2)，规则如下图：" target="_blank" rel="noopener">http://www.ecma-international.org/ecma-262/5.1/#sec-9.2)，规则如下图：</a></p>
 <p><img src="http://p66qa9vy4.bkt.clouddn.com/20180415152376231919735.png" alt="20180415152376231919735.png"></p>
 <p>###if(Undefined)<br>当 if(undenfined) 判断为 false</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var a</span><br><span class="line">if(a) &#123;</span><br><span class="line">    console.log(&apos;true&apos;)</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">    console.log(&apos;false&apos;)</span><br><span class="line">&#125; // false</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a</span><br><span class="line"><span class="keyword">if</span>(a) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'true'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'false'</span>)</span><br><span class="line">&#125; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 <h3 id="if-Null"><a href="#if-Null" class="headerlink" title="if(Null)"></a>if(Null)</h3><p>当 if(null) 判断为 false</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(null) &#123;</span><br><span class="line">    console.log(&apos;true&apos;)</span><br><span class="line">&#125; //false</span><br></pre></td></tr></table></figure>
 <h3 id="if-Boolean"><a href="#if-Boolean" class="headerlink" title="if(Boolean)"></a>if(Boolean)</h3><p>当括号内为布尔值，直接判断</p>
