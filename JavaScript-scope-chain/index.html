@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="JavaScript 作用域链作用域链是什么？了解作用域链之前我们要知道一下几个概念：  变量和函数的声明 函数的生命周期 Activetion Object（AO）、Variable Object（VO）   JavaScript中的函数运行在它们被定义的作用域里,而不是它们被执行的作用域里  每当执行流转到可执行代码时，即会进入一个执行环境。活动的执行环境构成一个栈：栈的底部始终是全局环境，顶">
+<meta property="og:type" content="article">
+<meta property="og:title" content="认真一点">
+<meta property="og:url" content="http://yoursite.com/JavaScript-scope-chain/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="JavaScript 作用域链作用域链是什么？了解作用域链之前我们要知道一下几个概念：  变量和函数的声明 函数的生命周期 Activetion Object（AO）、Variable Object（VO）   JavaScript中的函数运行在它们被定义的作用域里,而不是它们被执行的作用域里  每当执行流转到可执行代码时，即会进入一个执行环境。活动的执行环境构成一个栈：栈的底部始终是全局环境，顶">
+<meta property="og:updated_time" content="2018-04-19T19:30:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="认真一点">
+<meta name="twitter:description" content="JavaScript 作用域链作用域链是什么？了解作用域链之前我们要知道一下几个概念：  变量和函数的声明 函数的生命周期 Activetion Object（AO）、Variable Object（VO）   JavaScript中的函数运行在它们被定义的作用域里,而不是它们被执行的作用域里  每当执行流转到可执行代码时，即会进入一个执行环境。活动的执行环境构成一个栈：栈的底部始终是全局环境，顶">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>认真一点</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/JavaScript-Abstract-Equality-Comparison/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/JavaScript-scope-chain/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/JavaScript-scope-chain/&text="><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/JavaScript-scope-chain/&is_video=false&description="><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://yoursite.com/JavaScript-scope-chain/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/JavaScript-scope-chain/&name=&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript-作用域链"><span class="toc-number">1.</span> <span class="toc-text">JavaScript 作用域链</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量对象-Variable-Object（VO）"><span class="toc-number">1.1.</span> <span class="toc-text">变量对象 Variable Object（VO）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作用域链"><span class="toc-number">1.2.</span> <span class="toc-text">作用域链</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">认真一点</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-04-19T19:30:07.000Z" itemprop="datePublished">2018-04-20</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="JavaScript-作用域链"><a href="#JavaScript-作用域链" class="headerlink" title="JavaScript 作用域链"></a>JavaScript 作用域链</h1><p>作用域链是什么？<br>了解作用域链之前我们要知道一下几个概念：</p>
+<ul>
+<li>变量和函数的声明</li>
+<li>函数的生命周期</li>
+<li>Activetion Object（AO）、Variable Object（VO）</li>
+</ul>
+<blockquote>
+<p>JavaScript中的函数运行在它们被定义的作用域里,而不是它们被执行的作用域里</p>
+</blockquote>
+<p>每当执行流转到可执行代码时，即会进入一个执行环境。活动的执行环境构成一个栈：栈的底部始终是全局环境，顶部是当前活动的执行环境</p>
+<ul>
+<li>全局执行环境是最外围的一个执行环境。在浏览器中，全局环境就是window对象，因此所有全局变量和函数都是作为window对象的属性和方法创建的。</li>
+<li><strong>每个函数都有自己的执行环境</strong>。当执行流进入一个函数时，<strong>函数的环境被推入栈中</strong>。而在函数执行之后，栈将其环境弹出，把控制权返回给之前的执行环境。某个执行环境中的代码执行完后，该环境销毁，保存在其中的所有变量和函数定义也随之销毁。而全局执行环境直到应用程序退出才会被销毁。</li>
+</ul>
+<h2 id="变量对象-Variable-Object（VO）"><a href="#变量对象-Variable-Object（VO）" class="headerlink" title="变量对象 Variable Object（VO）"></a>变量对象 Variable Object（VO）</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>; <span class="comment">// 全局上下文中的变量</span></span><br><span class="line"> </span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">20</span>; <span class="comment">// function上下文中的局部变量</span></span><br><span class="line">&#125;)();</span><br><span class="line"> </span><br><span class="line">alert(a); <span class="comment">// 10</span></span><br><span class="line">alert(b); <span class="comment">// 全局变量 "b" 没有声明</span></span><br></pre></td></tr></table></figure>
+<p>上面这段代码中，变量 <code>b</code> 是在立即执行函数内的局部变量。在全局作用作用中调用时，JavaScript 会提示 <code>b</code> 没声明</p>
+<p>JavaScript 里没有块级作用域这一说法，ES规范指出独立作用域只能通过函数（function）代码类型的执行环境创建。也就是说，像 for 等其他循环并不能创建一个局部环境：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;) &#123;</span><br><span class="line">  alert(k);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">alert(k); <span class="comment">// 尽管循环已经结束但变量k依然在当前作用域</span></span><br></pre></td></tr></table></figure>
+<p>既然变量与执行环境相关，那<strong>变量自己应该知道它的数据存放在哪里</strong>，并知道如何访问。这就引出了<strong>「变量对象」</strong>这个概念。</p>
+<p>每个执行环境都有一个与之关联的变量对象，这个对象存储着在环境中定义的以下内容：</p>
+<ol>
+<li>函数的形参</li>
+<li>var声明的变量</li>
+<li>函数声明(不包括函数表达式)</li>
+</ol>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>当代码在一个环境中执行时，会创建变量对象的一个作用域链（scope chain）来保证对执行环境有权访问的变量和函数的有序访问。作用域第一个对象始终是当前执行代码所在环境的变量对象（VO）。</p>
+<p>在函数运行过程中标识符的解析是沿着作用域链一级一级搜索的过程，从第一个对象开始，逐级向后回溯，直到找到同名标识符为止，找到后不再继续遍历，找不到就报错。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> y = <span class="number">20</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> z = <span class="number">30</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="built_in">console</span>.log(x + y + z);</span><br><span class="line">    &#125;;</span><br><span class="line"> </span><br><span class="line">    bar()</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
+<p>上面代码的输出结果为”60″，函数bar可以直接访问”z”，然后通过作用域链访问上层的”x”和”y”。此时的作用域链为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//此时作用域链（Scope Chain）有三级，第一级为bar AO，第二级为foo AO,然后Global Object（VO）</span></span><br><span class="line">	scope -&gt; bar.AO -&gt; foo.AO -&gt; Global <span class="built_in">Object</span></span><br><span class="line">	bar.AO = &#123;</span><br><span class="line">		z : <span class="number">30</span>,</span><br><span class="line">		__parent__ : foo.AO</span><br><span class="line">	&#125;</span><br><span class="line">	foo.AO = &#123;</span><br><span class="line">		y : <span class="number">20</span>,</span><br><span class="line">		bar : &lt;reference to function&gt;,</span><br><span class="line">		__parent__ : &lt;Global Object&gt;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	Global Object = &#123;</span><br><span class="line">		x : 10,</span><br><span class="line">		foo : &lt;reference to function&gt;,</span><br><span class="line">		__parent__ : null</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>参考链接</p>
+<ol>
+<li><a href="http://blog.xieliqun.com/2016/10/06/scope-chain/" target="_blank" rel="noopener">深入了解JavaScript，从作用域链开始（1）</a></li>
+<li><a href="http://www.cnblogs.com/no-particular/archive/2013/01/31/2887293.html" target="_blank" rel="noopener">JavaScript执行环境 + 变量对象 + 作用域链 + 闭包</a></li>
+<li><a href="https://gaohaoyang.github.io/2015/05/20/scope/" target="_blank" rel="noopener">JavaScript 作用域和作用域链</a></li>
+</ol>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript-作用域链"><span class="toc-number">1.</span> <span class="toc-text">JavaScript 作用域链</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量对象-Variable-Object（VO）"><span class="toc-number">1.1.</span> <span class="toc-text">变量对象 Variable Object（VO）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作用域链"><span class="toc-number">1.2.</span> <span class="toc-text">作用域链</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/JavaScript-scope-chain/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/JavaScript-scope-chain/&text="><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/JavaScript-scope-chain/&is_video=false&description="><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://yoursite.com/JavaScript-scope-chain/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/JavaScript-scope-chain/&title="><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/JavaScript-scope-chain/&name=&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 tan61
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'code661-github-io';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
