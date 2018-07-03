@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="总结 内联元素的宽：由它内部的文字、图片来决定（padding、margin、border会算在宽度内） 内联元素的高：由它文字的行高来决定（注意 padding、margin 不会改变内联元素的高度，虽然元素范围增大了，但是对元素周围的内容是没影响的） 块级元素宽度：宽度默认是它的容器的100%，除非设定一个宽度 块级元素高度总结：div 的高度是由它内部文档流(Normal flow)中元素的">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS 高度 &amp; 宽度">
+<meta property="og:url" content="http://yoursite.com/css-height-width/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="总结 内联元素的宽：由它内部的文字、图片来决定（padding、margin、border会算在宽度内） 内联元素的高：由它文字的行高来决定（注意 padding、margin 不会改变内联元素的高度，虽然元素范围增大了，但是对元素周围的内容是没影响的） 块级元素宽度：宽度默认是它的容器的100%，除非设定一个宽度 块级元素高度总结：div 的高度是由它内部文档流(Normal flow)中元素的">
+<meta property="og:updated_time" content="2018-07-03T02:50:19.949Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS 高度 &amp; 宽度">
+<meta name="twitter:description" content="总结 内联元素的宽：由它内部的文字、图片来决定（padding、margin、border会算在宽度内） 内联元素的高：由它文字的行高来决定（注意 padding、margin 不会改变内联元素的高度，虽然元素范围增大了，但是对元素周围的内容是没影响的） 块级元素宽度：宽度默认是它的容器的100%，除非设定一个宽度 块级元素高度总结：div 的高度是由它内部文档流(Normal flow)中元素的">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>CSS 高度 &amp; 宽度</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/css-IFC/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/css-height-width/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/css-height-width/&text=CSS 高度 &amp; 宽度"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/css-height-width/&is_video=false&description=CSS 高度 &amp; 宽度"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=CSS 高度 &amp; 宽度&body=Check out this article: http://yoursite.com/css-height-width/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/css-height-width/&name=CSS 高度 &amp; 宽度&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#外边距合并"><span class="toc-number">1.1.</span> <span class="toc-text">外边距合并</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        CSS 高度 &amp; 宽度
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">认真一点</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-07-03T02:49:47.000Z" itemprop="datePublished">2018-07-03</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/CSS/">CSS</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>内联元素的宽：由它内部的文字、图片来决定（padding、margin、border会算在宽度内）</li>
+<li>内联元素的高：由它文字的行高来决定（注意 padding、margin 不会改变内联元素的高度，虽然元素范围增大了，但是对元素周围的内容是没影响的）</li>
+<li>块级元素宽度：宽度默认是它的容器的100%，除非设定一个宽度</li>
+<li>块级元素高度总结：div 的高度是由它内部文档流(Normal flow)中元素的高度总和决定的（不是单纯的讲所有高度相加、因为需要需考虑margin 合并等情况）。那何为文档流？文档流中内联元素从左至右依次排列，如果空间不够，另起一行继续排列，当中的块级元素都会另起一行从上到下排列</li>
+</ul>
+<hr>
+<ul>
+<li>当有如下代码，此时的<code>div</code>元素高度为多少 ？<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>font-size</code> 乘以 <code>line-height</code>，当我们不设置行高时，浏览器用的是默认是字体的建议行高（字体设计师傅把它写在字体文件中），如「苹方」建议行高是 1.4，我们设置 <code>font-size: 20px</code> 那么 div 的高度为 20px × 1.4 = 28px。</p>
+<p>在我们设置了<code>line-height = 30px</code> 时（写死了行高），此时 div 的高度由行高决定。不会因为字体大小变化而改变。可以看这个例子：<br>📥</p>
+<p>总结为：当 div 里面只有一个内联元素，那么 div 的高度就是这内联元素的行高</p>
+<ul>
+<li><p>在 div 中只有内联元素时</p>
+<ul>
+<li>两个内联元素之间，存在看不见的字符（空格、制表符、回车……）都会被 HTML 视作一个空格字符。比如：用 <code>display:inline-block</code> 做导航条时，每个导航之前会出现间隙，就是因为将回车符变为一个空格。</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break" target="_blank" rel="noopener">word-break 指定了怎样在单词内断行</a></li>
+</ul>
+</li>
+<li><p>脱离文档流的情况<br>直观的理解为「在计算宽高时别把<strong>脱离文档流的元素</strong>算进去」</p>
+</li>
+</ul>
+<ol>
+<li>float</li>
+<li>position: absolute</li>
+<li>position: fixed</li>
+</ol>
+<ul>
+<li>文字垂直居中<ul>
+<li>不要使用 heigth 讲父元素高度写死。应该用行高<code>line-height</code> 和 <code>padding</code> 来撑开开父元素，自然就垂直居中了</li>
+</ul>
+</li>
+<li><p>在<strong>父元素确定高度</strong>（高度被写死）的情况下。（一般情况就是这个父元素需要全屏）而且，其内部的块级<strong>元素宽高不确定</strong>（由它的内容的内容来确定宽高）。内部的元素需要<strong>绝对居中</strong>，需要用到 <code>display: flex</code> 具体使用方法</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125; <span class="selector-class">.dad</span> &#123;</span><br><span class="line">    heigth: 100vh; // 高度固定</span><br><span class="line">    <span class="selector-tag">display</span>: <span class="selector-tag">flex</span>;</span><br><span class="line">    <span class="selector-tag">justify-content</span>: <span class="selector-tag">center</span>;</span><br><span class="line">    <span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在父元素高度没写死（由里面的元素撑起来）时，需要让子元素垂直居中，让父元素上下 padding 相等即可。需要水平居中让子元素<code>margin: 0 auto</code></p>
+</li>
+</ul>
+<h3 id="外边距合并"><a href="#外边距合并" class="headerlink" title="外边距合并"></a>外边距合并</h3><ul>
+<li>在CSS中,两个或多个毗邻(父子元素或兄弟元素)的普通流中的块级元素垂直方向上的 margin会发生叠加。这种方式形成的外边距即可称为外边距叠加（collapsed margin）</li>
+<li>何为毗邻:是指没有被非空内容、 padding、 border或 clear分隔开。<br>何为普通流:除浮动(foat)、绝对定位( absolute)外的代码即<br>为普通流。</li>
+</ul>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#外边距合并"><span class="toc-number">1.1.</span> <span class="toc-text">外边距合并</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/css-height-width/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/css-height-width/&text=CSS 高度 &amp; 宽度"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/css-height-width/&is_video=false&description=CSS 高度 &amp; 宽度"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=CSS 高度 &amp; 宽度&body=Check out this article: http://yoursite.com/css-height-width/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/css-height-width/&title=CSS 高度 &amp; 宽度"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/css-height-width/&name=CSS 高度 &amp; 宽度&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 tan61
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'code661-github-io';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
