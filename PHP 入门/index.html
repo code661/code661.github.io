@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>认真一点</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="PHP 入门在工作的项目中后端使用的是 PHP，打算借着这个机会学习一下后端语言。 PHP 是什么？PHP（全称 Hypertext Preprocessor，超文本预处理器的字母缩写）是一种服务器端脚本语言，它可嵌入到 HTML 中，尤其适合 WEB 开发。 PHP 安装MacWindowsComposer 安装与使用Composer 是一个 杰出 的依赖管理器。在 composer.json">
+<meta property="og:type" content="article">
+<meta property="og:title" content="认真一点">
+<meta property="og:url" content="http://yoursite.com/PHP 入门/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="PHP 入门在工作的项目中后端使用的是 PHP，打算借着这个机会学习一下后端语言。 PHP 是什么？PHP（全称 Hypertext Preprocessor，超文本预处理器的字母缩写）是一种服务器端脚本语言，它可嵌入到 HTML 中，尤其适合 WEB 开发。 PHP 安装MacWindowsComposer 安装与使用Composer 是一个 杰出 的依赖管理器。在 composer.json">
+<meta property="og:updated_time" content="2018-12-16T07:38:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="认真一点">
+<meta name="twitter:description" content="PHP 入门在工作的项目中后端使用的是 PHP，打算借着这个机会学习一下后端语言。 PHP 是什么？PHP（全称 Hypertext Preprocessor，超文本预处理器的字母缩写）是一种服务器端脚本语言，它可嵌入到 HTML 中，尤其适合 WEB 开发。 PHP 安装MacWindowsComposer 安装与使用Composer 是一个 杰出 的依赖管理器。在 composer.json">
+<meta name="twitter:creator" content="@tanduzhi">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-PHP 入门" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+    <div class="mobile-nav">
+      <h1 class="nickname">认真一点</h1>
+      <a id="menu">
+        &#9776; Menu
+      </a>
+    </div>
+    
+        <nav id="main-nav" class="main-nav nav-left">
+    
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h1 id="PHP-入门"><a href="#PHP-入门" class="headerlink" title="PHP 入门"></a>PHP 入门</h1><p>在工作的项目中后端使用的是 PHP，打算借着这个机会学习一下后端语言。</p>
+<h2 id="PHP-是什么？"><a href="#PHP-是什么？" class="headerlink" title="PHP 是什么？"></a>PHP 是什么？</h2><p>PHP（全称 Hypertext Preprocessor，超文本预处理器的字母缩写）是一种服务器端脚本语言，它可嵌入到 HTML 中，<strong>尤其适合 WEB 开发。</strong></p>
+<h2 id="PHP-安装"><a href="#PHP-安装" class="headerlink" title="PHP 安装"></a>PHP 安装</h2><h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h3><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><h2 id="Composer-安装与使用"><a href="#Composer-安装与使用" class="headerlink" title="Composer 安装与使用"></a>Composer 安装与使用</h2><p>Composer 是一个 <strong>杰出</strong> 的依赖管理器。在 <code>composer.json</code> 文件中列出你项目所需的依赖包，加上一点简单的命令，Composer 将会自动帮你下载并设置你的项目依赖。Composer 有点类似于 Node.js 世界里的 NPM，或者 Ruby 世界里的 Bundler。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">choco install composer</span><br></pre></td></tr></table></figure></p>
+<p>Composer 会建立一个 composer.lock 文件，在你第一次执行 php composer install 时，存放下载的每个依赖包精确的版本编号。假如你要分享你的项目给其他开发者，并且 composer.lock 文件也在你分享的文件之中的话。 当他们执行 php composer.phar install 这个命令时，他们将会得到与你一样的依赖版本。</p>
+<h3 id="PHP-标记"><a href="#PHP-标记" class="headerlink" title="PHP 标记"></a>PHP 标记</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="从-HTML-中分离"><a href="#从-HTML-中分离" class="headerlink" title="从 HTML 中分离"></a>从 HTML 中分离</h3><p>可以避免大段的 echo HTML 代码，在需要使用 PHP 的地方再执行 PHP 程序<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> <span class="string">'if you want to serve XHTML or XML documents, do it like this'</span>; <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="PHP-指令分割符号"><a href="#PHP-指令分割符号" class="headerlink" title="PHP 指令分割符号"></a>PHP 指令分割符号</h3><p>PHP 需要在每个语句后用分号（<code>;</code>）结束指令。如果后面还有新行，则代码段的结束标记包含了行结束。</p>
+<h3 id="PHP-注释"><a href="#PHP-注释" class="headerlink" title="PHP 注释"></a>PHP 注释</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 多行注释</span></span><br><span class="line"><span class="comment"> * 注释内容</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/PHP 入门/" class="article-date">
+  <time datetime="2018-12-16T07:38:11.000Z" itemprop="datePublished">2018-12-16</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/Git 学习笔记/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/英语语法学习/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">英语语法学习</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" class="comments">
+    <div id="valine_container"></div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Fusce eget urna vitae velit <em>eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque</em> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "RJsit0ikyL55q121zCXIAuir-gzGzoHsz",
+          appKey: "XPARdd1Lo3peBXEeRqf6pYeg",
+          placeholder: "交流一下：）",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>认真一点</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Git 学习笔记基本思路 主力使用编辑器中的版本控制，如 VS Code 和 Web Storm 中都有集成版本控制的插件 备用的 Gitup 这个 Mac 软件，很简洁功能目前能满足自己的需求 再搭配着学习一些基本的命令行Git 的操作在遇到不会的时候就去查，学习到了之前不知道的点就把它记录到这个文档中。 既然 Git 是一个工具，就没必要把时间浪费在那些“高级”但几乎永远不会用到的命令上。一旦">
+<meta property="og:type" content="article">
+<meta property="og:title" content="认真一点">
+<meta property="og:url" content="http://yoursite.com/Git 学习笔记/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="Git 学习笔记基本思路 主力使用编辑器中的版本控制，如 VS Code 和 Web Storm 中都有集成版本控制的插件 备用的 Gitup 这个 Mac 软件，很简洁功能目前能满足自己的需求 再搭配着学习一些基本的命令行Git 的操作在遇到不会的时候就去查，学习到了之前不知道的点就把它记录到这个文档中。 既然 Git 是一个工具，就没必要把时间浪费在那些“高级”但几乎永远不会用到的命令上。一旦">
+<meta property="og:image" content="http://yoursite.com/Git%20学习笔记/Git%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2-1-1.png">
+<meta property="og:image" content="http://yoursite.com/Git%20学习笔记/Git%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/562F61D1-6583-4CFF-A7C9-A16E9358ED19.png">
+<meta property="og:updated_time" content="2018-12-16T07:39:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="认真一点">
+<meta name="twitter:description" content="Git 学习笔记基本思路 主力使用编辑器中的版本控制，如 VS Code 和 Web Storm 中都有集成版本控制的插件 备用的 Gitup 这个 Mac 软件，很简洁功能目前能满足自己的需求 再搭配着学习一些基本的命令行Git 的操作在遇到不会的时候就去查，学习到了之前不知道的点就把它记录到这个文档中。 既然 Git 是一个工具，就没必要把时间浪费在那些“高级”但几乎永远不会用到的命令上。一旦">
+<meta name="twitter:image" content="http://yoursite.com/Git%20学习笔记/Git%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2-1-1.png">
+<meta name="twitter:creator" content="@tanduzhi">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-Git 学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+    <div class="mobile-nav">
+      <h1 class="nickname">认真一点</h1>
+      <a id="menu">
+        &#9776; Menu
+      </a>
+    </div>
+    
+        <nav id="main-nav" class="main-nav nav-left">
+    
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h1 id="Git-学习笔记"><a href="#Git-学习笔记" class="headerlink" title="Git 学习笔记"></a>Git 学习笔记</h1><h2 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h2><ul>
+<li>主力使用编辑器中的版本控制，如 VS Code 和 Web Storm 中都有集成版本控制的插件</li>
+<li>备用的 Gitup 这个 Mac 软件，很简洁功能目前能满足自己的需求</li>
+<li>再搭配着学习一些基本的命令行<br>Git 的操作在遇到不会的时候就去查，学习到了之前不知道的点就把它记录到这个文档中。<blockquote>
+<p>既然 Git 是一个工具，就没必要把时间浪费在那些“高级”但几乎永远不会用到的命令上。一旦你真的非用不可了，到时候再自行 Google 或者请教专家也未迟。  </p>
+</blockquote>
+在部署项目到 Github Pages 时遇到了麻烦，开始找资料系统的学习一下。看文字教程有点儿无聊，找了个视频教程。<strong>这次学习 Git 主要的目的是搞明白「分支」「远程分支」的概念</strong>，因为在把项目部署 GitHub Pages 时会用到 <code>gh-pages</code> 这个分支。对概念的不了解，导致我在使用时会很迷糊。</li>
+</ul>
+<h2 id="为什么使用-Git"><a href="#为什么使用-Git" class="headerlink" title="为什么使用 Git"></a>为什么使用 Git</h2><p>当然是更好的管理项目的代码，协助开发进行版本迭代，以及团队的合作</p>
+<h2 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h2><p>在 Mac 中配置开发环境，能用 HomeBrew 时就优先使用它。直接 <code>brew install git</code></p>
+<h2 id="初始化版本库"><a href="#初始化版本库" class="headerlink" title="初始化版本库"></a>初始化版本库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>这个当然比较熟悉了。会有<code>.git</code>的目录被创建，保存着当前版本库的数据。</p>
+<h2 id="提交修改"><a href="#提交修改" class="headerlink" title="提交修改"></a>提交修改</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add file.js file1.js</span><br></pre></td></tr></table></figure>
+<p><img src="Git%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2-1-1.png" alt=""></p>
+<p>Git提供了一个命令<code>git reflog</code>用来记录你的每一次命令</p>
+<h2 id="被修改的文件，想取消这次修改"><a href="#被修改的文件，想取消这次修改" class="headerlink" title="被修改的文件，想取消这次修改"></a>被修改的文件，想取消这次修改</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git checkout -- file.js</span><br></pre></td></tr></table></figure>
+<h2 id="上次一次-commit-时漏掉的东西，"><a href="#上次一次-commit-时漏掉的东西，" class="headerlink" title="上次一次 commit 时漏掉的东西，"></a>上次一次 commit 时漏掉的东西，</h2><p>先正常的 add<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git commit --amend --no-edit</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用-git-reset-lt-filename-gt-以取消暂存"><a href="#使用-git-reset-lt-filename-gt-以取消暂存" class="headerlink" title="使用 git reset &lt;filename&gt; 以取消暂存"></a>使用 <code>git reset &lt;filename&gt;</code> 以取消暂存</h2><h2 id="reset-回到-之前的-commit"><a href="#reset-回到-之前的-commit" class="headerlink" title="reset 回到 之前的 commit"></a>reset 回到 之前的 commit</h2><h2 id="回到从前-checkout-针对单个文件"><a href="#回到从前-checkout-针对单个文件" class="headerlink" title="回到从前 (checkout 针对单个文件)"></a>回到从前 (checkout 针对单个文件)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout c6762a1 -- &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="新建一个分支"><a href="#新建一个分支" class="headerlink" title="新建一个分支"></a>新建一个分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
+<h2 id="切换到一个分支上"><a href="#切换到一个分支上" class="headerlink" title="切换到一个分支上"></a>切换到一个分支上</h2><p>HEAD 指向了该分支<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure></p>
+<h2 id="删除一个分支"><a href="#删除一个分支" class="headerlink" title="删除一个分支"></a>删除一个分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -d dev</span><br></pre></td></tr></table></figure>
+<h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+<p>将 dev 分支合并到当前所在的分支中</p>
+<h2 id="分支也是一个指针"><a href="#分支也是一个指针" class="headerlink" title="分支也是一个指针"></a>分支也是一个指针</h2><h2 id="Git-鼓励大量使用分支"><a href="#Git-鼓励大量使用分支" class="headerlink" title="Git 鼓励大量使用分支"></a>Git 鼓励大量使用分支</h2><p>自己之前很少使用分支，主要的原因是对这块的知识不了解，不敢轻易的走出舒适区。</p>
+<h2 id="当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。"><a href="#当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。" class="headerlink" title="当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。"></a>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</h2><h2 id="合并分支时，如果可能，Git会用Fast-forward模式，但这种模式下，删除分支后，会丢掉分支信息。"><a href="#合并分支时，如果可能，Git会用Fast-forward模式，但这种模式下，删除分支后，会丢掉分支信息。" class="headerlink" title="合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。"></a>合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。</h2><h2 id="合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast-forward合并就看不出来曾经做过合并。"><a href="#合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast-forward合并就看不出来曾经做过合并。" class="headerlink" title="合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。"></a>合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</h2><h2 id="修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；"><a href="#修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；" class="headerlink" title="修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；"></a>修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；</h2><h2 id="当手头工作没有完成时，先把工作现场git-stash一下，然后去修复bug，修复后，再git-stash-pop，回到工作现场。"><a href="#当手头工作没有完成时，先把工作现场git-stash一下，然后去修复bug，修复后，再git-stash-pop，回到工作现场。" class="headerlink" title="当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。"></a>当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。</h2><h2 id="开发一个新feature，最好新建一个分支；"><a href="#开发一个新feature，最好新建一个分支；" class="headerlink" title="开发一个新feature，最好新建一个分支；"></a>开发一个新feature，最好新建一个分支；</h2><h2 id="如果要丢弃一个没有被合并过的分支，可以通过git-branch-D-强行删除。"><a href="#如果要丢弃一个没有被合并过的分支，可以通过git-branch-D-强行删除。" class="headerlink" title="如果要丢弃一个没有被合并过的分支，可以通过git branch -D 强行删除。"></a>如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。</name></h2><h2 id="当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。"><a href="#当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。" class="headerlink" title="当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。"></a>当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。</h2><h2 id="推送分支"><a href="#推送分支" class="headerlink" title="推送分支"></a>推送分支</h2><p>就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git 就会把该分支推送到远程库对应的远程分支上<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure></p>
+<p>如果要推送其他分支，比如dev，就改成：<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push origin dev</span><br></pre></td></tr></table></figure></p>
+<h2 id="Git-的配置"><a href="#Git-的配置" class="headerlink" title="Git 的配置"></a>Git 的配置</h2><p>使用 <code>git config</code> 来修改配置。比如说<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"tanduzhi"</span></span><br></pre></td></tr></table></figure></p>
+<p>列出当前的 Git 的一些配置信息<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></p>
+<p>使用 Gitup 有图形界面，会友好一些<br><img src="Git%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/562F61D1-6583-4CFF-A7C9-A16E9358ED19.png" alt=""></p>
+<h2 id="把多人协作中常用的功能在-Gitup-中的操作熟悉一下，不想去记太多的命令"><a href="#把多人协作中常用的功能在-Gitup-中的操作熟悉一下，不想去记太多的命令" class="headerlink" title="把多人协作中常用的功能在 Gitup 中的操作熟悉一下，不想去记太多的命令"></a>把多人协作中常用的功能在 Gitup 中的操作熟悉一下，不想去记太多的命令</h2><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><blockquote>
+<p>Git 的概念，是由一套完整的思维逻辑所构成的。 学懂了概念，就能学懂 Git。<br>这次学习对分支有了更好的了解，对 Git 的重点概念「分支」「提交」「暂存区」「工作区」… 进行了更系统的认识。这个是工具方面的知识，保持能用就好的状态就好了。重点是在不同的场景下使用改场景下最合适的命令来做，慢慢的积累经验。</p>
+</blockquote>
+<h2 id="实际项目中使用-Git"><a href="#实际项目中使用-Git" class="headerlink" title="实际项目中使用 Git"></a>实际项目中使用 Git</h2><p>入职一周，公司使用 Git 来管理代码。遇到了一些情况，把它记录下来。<br>大家一起在<code>develop</code>分支下开发，我只需要将代码提交到这个分支</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout -b develop origin/develop</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li><a href="https://juejin.im/book/5a124b29f265da431d3c472e" target="_blank" rel="noopener">Git 原理详解及实用指南 — 掘金小册</a></li>
+<li><a href="https://blog.suisuijiang.com/git-commit-written-guide/" target="_blank" rel="noopener">Commit Message 编写指南 | 碎碎酱</a></li>
+<li><a href="http://igit.linuxtoy.org/contents.html" target="_blank" rel="noopener">沉浸式学 Git: Contents</a></li>
+<li><a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines" target="_blank" rel="noopener">angular.js/DEVELOPERS.md at master · angular/angular.js · GitHub</a></li>
+<li><a href="https://learngitbranching.js.org" target="_blank" rel="noopener">Learn Git Branching</a></li>
+</ul>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/Git 学习笔记/" class="article-date">
+  <time datetime="2018-12-16T07:39:18.000Z" itemprop="datePublished">2018-12-16</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/香不香港正式项目/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/PHP 入门/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" class="comments">
+    <div id="valine_container"></div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Fusce eget urna vitae velit <em>eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque</em> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "RJsit0ikyL55q121zCXIAuir-gzGzoHsz",
+          appKey: "XPARdd1Lo3peBXEeRqf6pYeg",
+          placeholder: "交流一下：）",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

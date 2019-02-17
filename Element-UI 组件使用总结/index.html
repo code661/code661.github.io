@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>认真一点</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Element-UI 组件使用总结刚入职接触的都是公司项目的后台，两个项目的后台的前端都是使用 Element-UI 组件库。大部分时候后台的功能就那么几个，把常用的组件在实际项目场景下如何使用给总结好，可以提高工作的效率 表单校验在操作后台的工作人员填写表单时进行检验，这个涉及到规则的定义。 表单的数据我们会把表单的数据对象通过一个叫 model 的 props 传入到 &amp;lt;el-form&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="认真一点">
+<meta property="og:url" content="http://yoursite.com/Element-UI 组件使用总结/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="Element-UI 组件使用总结刚入职接触的都是公司项目的后台，两个项目的后台的前端都是使用 Element-UI 组件库。大部分时候后台的功能就那么几个，把常用的组件在实际项目场景下如何使用给总结好，可以提高工作的效率 表单校验在操作后台的工作人员填写表单时进行检验，这个涉及到规则的定义。 表单的数据我们会把表单的数据对象通过一个叫 model 的 props 传入到 &amp;lt;el-form&amp;">
+<meta property="og:updated_time" content="2018-12-12T09:00:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="认真一点">
+<meta name="twitter:description" content="Element-UI 组件使用总结刚入职接触的都是公司项目的后台，两个项目的后台的前端都是使用 Element-UI 组件库。大部分时候后台的功能就那么几个，把常用的组件在实际项目场景下如何使用给总结好，可以提高工作的效率 表单校验在操作后台的工作人员填写表单时进行检验，这个涉及到规则的定义。 表单的数据我们会把表单的数据对象通过一个叫 model 的 props 传入到 &amp;lt;el-form&amp;">
+<meta name="twitter:creator" content="@tanduzhi">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-Element-UI 组件使用总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+    <div class="mobile-nav">
+      <h1 class="nickname">认真一点</h1>
+      <a id="menu">
+        &#9776; Menu
+      </a>
+    </div>
+    
+        <nav id="main-nav" class="main-nav nav-left">
+    
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h1 id="Element-UI-组件使用总结"><a href="#Element-UI-组件使用总结" class="headerlink" title="Element-UI 组件使用总结"></a>Element-UI 组件使用总结</h1><p>刚入职接触的都是公司项目的后台，两个项目的后台的前端都是使用 Element-UI 组件库。大部分时候后台的功能就那么几个，把常用的组件在实际项目场景下如何使用给总结好，可以提高工作的效率</p>
+<h2 id="表单校验"><a href="#表单校验" class="headerlink" title="表单校验"></a>表单校验</h2><p>在操作后台的工作人员填写表单时进行检验，这个涉及到规则的定义。</p>
+<h3 id="表单的数据"><a href="#表单的数据" class="headerlink" title="表单的数据"></a>表单的数据</h3><p>我们会把表单的数据对象通过一个叫 <code>model</code> 的 props 传入到 <code>&lt;el-form&gt;</code> 这个组件内。这个表单数据对象一般我们会和<code>&lt;el-input&gt;</code> <code>&lt;el-select&gt;</code>等表单控件使用 v-model 来做双向绑定，在提交表单时就将这个数据对象发送给后端<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-form</span> <span class="attr">:model</span>=<span class="string">"formData"</span> <span class="attr">:rules</span>=<span class="string">"rules"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">prop</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model</span>=<span class="string">"formData.name"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">formData: &#123;</span><br><span class="line">  name: <span class="string">''</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="校验的规则"><a href="#校验的规则" class="headerlink" title="校验的规则"></a>校验的规则</h3><p>另外，我们还需要传入一个 <code>rules</code> ，它是一个对象。这个对象的的键名是上面<code>model</code> 数据对象中的字段，来规定数据对象中的哪些值需要被校验。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">rules: &#123;</span><br><span class="line">  name: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">'请输入活动名称'</span>, <span class="attr">trigger</span>: <span class="string">'blur'</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">min</span>: <span class="number">3</span>, <span class="attr">max</span>: <span class="number">5</span>, <span class="attr">message</span>: <span class="string">'长度在 3 到 5 个字符'</span>, <span class="attr">trigger</span>: <span class="string">'blur'</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这个<code>rules</code> 对象的值是一个包含一个或多个对象的数组。一个对象就对应着一条校验规则。在这个对象中有个<code>validator</code>的字段，该字段的值为函数名，我们通过这个函数来定义更复杂的验证规则。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">rules: &#123;</span><br><span class="line">  name: [</span><br><span class="line">    &#123; <span class="attr">validator</span>: validatePass, <span class="attr">trigger</span>: <span class="string">'change'</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">validatePass(rule, value, callback)&#123;</span><br><span class="line">  <span class="keyword">if</span> (value.length &gt; <span class="number">12</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> callback(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'详细信息不能超过 12 个字'</span>))</span><br><span class="line">  &#125;</span><br><span class="line">  callback()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该函数的三个参数，rule为规则，value是输入的值，callback是规则不通过的回调。</p>
+<h3 id="需要校验的字段是对应哪个表单项"><a href="#需要校验的字段是对应哪个表单项" class="headerlink" title="需要校验的字段是对应哪个表单项"></a>需要校验的字段是对应哪个表单项</h3><p>通过前面给 <code>&lt;el-form&gt;</code> 传入<code>model</code>和<code>rules</code>，组件知道表单中的数据是什么、每条数据的校验规则是什么？我们还需要告诉组件，一个数据的校验规则对应哪个表单项。我们把 <code>&lt;el-form-item&gt;</code> 的 prop 属性设置为需校验的字段名即可<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">prop</span>=<span class="string">"name"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="图片上传"><a href="#图片上传" class="headerlink" title="图片上传"></a>图片上传</h2><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>表格比较常见的需求是排序，自己第一次写排序时并没有搞定。是疯子帮我写的，回头看看他的代码再去理解是如何实现表格排序的。项目中是后端进行排序<br>监听 Table 组件的 sort-change <code>@sort-change=&quot;handleSort&quot;</code><br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Table</span> @<span class="attr">sort-change</span>=<span class="string">"handleSort"</span>&gt;</span><span class="tag">&lt;/<span class="name">Table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>再给 TableColumn 组件添加 <code>sortable</code> 的属性值为 <code>&quot;custom&quot;</code>。<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Table</span> @<span class="attr">sort-change</span>=<span class="string">"handleSort"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">TableColumn</span> <span class="attr">sortable</span>=<span class="string">"custom"</span>&gt;</span><span class="tag">&lt;/<span class="name">TableColumn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>最后，开始写 handleSort 这个函数。这个示例代码中<code>orderBy</code> 是给后端的字段，这个和后端约定的是在参数为 1 时是升序，为 2 时是降序。在这个函数的参数中可以拿到一个对象，对象中的有一个 order 是表格中此列当前排序的方法（升序或降序）。我们就可以根据此时表格的升序降序来给后端请求不同的参数。<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">column: &#123;…&#125;</span><br><span class="line">order: "ascending"</span><br><span class="line">prop: "activity_count"</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">handleSort(info) &#123;</span><br><span class="line">    <span class="keyword">if</span> (info.order) &#123;</span><br><span class="line">        <span class="keyword">this</span>.orderBy = info.order.includes(<span class="string">"desc"</span>) ? <span class="string">"1"</span> : <span class="string">"2"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.orderBy = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.page = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">this</span>.getList();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="翻页"><a href="#翻页" class="headerlink" title="翻页"></a>翻页</h2><h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h2 id="开关"><a href="#开关" class="headerlink" title="开关"></a>开关</h2><p>在页面中添加一个开关，用 <code>v-model</code> 来双向绑定一个值。在之前做的时候值用的是 <code>Boolean</code> 类型，也就是打开时是 true，关闭时为 <code>false</code>。但是，如果这个值传个后端的参数。比如需要开关打开时 0，关闭时是 1。Element-UI 提供了一对属性 <code>active-value</code>和<code>inactive-value</code>，用来指定打开和关闭时的值。</p>
+<p>如果在关闭和打开时需要做一些事情可以监听 change 事件</p>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/Element-UI 组件使用总结/" class="article-date">
+  <time datetime="2018-12-12T09:00:37.000Z" itemprop="datePublished">2018-12-12</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/「香不香港」项目后台开发笔记/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/WebStorm 使用笔记/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" class="comments">
+    <div id="valine_container"></div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Fusce eget urna vitae velit <em>eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque</em> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "RJsit0ikyL55q121zCXIAuir-gzGzoHsz",
+          appKey: "XPARdd1Lo3peBXEeRqf6pYeg",
+          placeholder: "交流一下：）",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

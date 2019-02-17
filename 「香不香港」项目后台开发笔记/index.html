@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>认真一点</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="「香不香港」后台开发笔记测试帐号tanduzhi@offerhk.comtesttest 项目线上地址开发测试环境项目管理平台 - 禅道hkok-admin-5.5  · GitLab 前端库 &amp;amp; 框架组件库：Element-UIHTTP 请求：axios状态管理：Vuex路由管理：Vue Router富文本编辑器：vue2-editor 开发环境搭建安装 phpMac 下使用 homeb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="认真一点">
+<meta property="og:url" content="http://yoursite.com/「香不香港」项目后台开发笔记/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="「香不香港」后台开发笔记测试帐号tanduzhi@offerhk.comtesttest 项目线上地址开发测试环境项目管理平台 - 禅道hkok-admin-5.5  · GitLab 前端库 &amp;amp; 框架组件库：Element-UIHTTP 请求：axios状态管理：Vuex路由管理：Vue Router富文本编辑器：vue2-editor 开发环境搭建安装 phpMac 下使用 homeb">
+<meta property="og:updated_time" content="2018-12-13T02:34:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="认真一点">
+<meta name="twitter:description" content="「香不香港」后台开发笔记测试帐号tanduzhi@offerhk.comtesttest 项目线上地址开发测试环境项目管理平台 - 禅道hkok-admin-5.5  · GitLab 前端库 &amp;amp; 框架组件库：Element-UIHTTP 请求：axios状态管理：Vuex路由管理：Vue Router富文本编辑器：vue2-editor 开发环境搭建安装 phpMac 下使用 homeb">
+<meta name="twitter:creator" content="@tanduzhi">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-「香不香港」项目后台开发笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+    <div class="mobile-nav">
+      <h1 class="nickname">认真一点</h1>
+      <a id="menu">
+        &#9776; Menu
+      </a>
+    </div>
+    
+        <nav id="main-nav" class="main-nav nav-left">
+    
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h1 id="「香不香港」后台开发笔记"><a href="#「香不香港」后台开发笔记" class="headerlink" title="「香不香港」后台开发笔记"></a>「香不香港」后台开发笔记</h1><p>测试帐号<br><a href="mailto:tanduzhi@offerhk.com" target="_blank" rel="noopener">tanduzhi@offerhk.com</a><br>testtest</p>
+<p><a href="http://manager.offerhk.com/login" target="_blank" rel="noopener">项目线上地址</a><br><a href="http://managerdev.offerhk.com/login" target="_blank" rel="noopener">开发测试环境</a><br><a href="https://chandao.offerhk.com/" target="_blank" rel="noopener">项目管理平台 - 禅道</a><br><a href="http://gitlab.offerhk.com/offerhk/hkok-admin-5.5" target="_blank" rel="noopener">hkok-admin-5.5  · GitLab</a></p>
+<h2 id="前端库-amp-框架"><a href="#前端库-amp-框架" class="headerlink" title="前端库 &amp; 框架"></a>前端库 &amp; 框架</h2><p>组件库：Element-UI<br>HTTP 请求：axios<br>状态管理：Vuex<br>路由管理：Vue Router<br>富文本编辑器：<a href="https://github.com/davidroyer/vue2-editor" target="_blank" rel="noopener">vue2-editor</a></p>
+<h2 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h2><h3 id="安装-php"><a href="#安装-php" class="headerlink" title="安装 php"></a>安装 php</h3><p><a href="https://blog.kelu.org/tech/2017/07/05/switch-diff-version-of-php-on-mac.html" target="_blank" rel="noopener">Mac 下使用 homebrew 切换不同版本 php  | 血衫非弧の一存</a></p>
+<p>在 Mac 上直接使用 <code>homebrew</code> 来安装</p>
+<h3 id="安装-composer"><a href="#安装-composer" class="headerlink" title="安装 composer"></a>安装 composer</h3><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>Git 切换到 develop 分支下开发 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b develop origin/develop</span><br></pre></td></tr></table></figure>
+<p>新拉下来项目 在跟文件夹添加<code>.env</code>，这个文件是 Laravel 的环境变量</p>
+<p><code>npm install</code> 安装前端依赖<br><code>composer install</code> 安装 php 依赖<br><code>npm run watch</code><br><code>php artisan serve</code></p>
+<p><code>php artisan key:generate</code></p>
+<h2 id="Element-UI-组件库的使用"><a href="#Element-UI-组件库的使用" class="headerlink" title="Element-UI 组件库的使用"></a>Element-UI 组件库的使用</h2><p><a href="https://lhmiao.github.io/2018/04/23/Element-UI%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="noopener">Element UI的使用（一） | Lhmiao’s Blog</a><br><a href="http://element-cn.eleme.io/#/zh-CN/component/loading" target="_blank" rel="noopener">Element - loading</a><br>表格组件<br>文件上传组件</p>
+<h2 id="使用-axios-发送-HTTP-请求"><a href="#使用-axios-发送-HTTP-请求" class="headerlink" title="使用 axios 发送 HTTP 请求"></a>使用 axios 发送 HTTP 请求</h2><p>把 axios 实例挂到了 Vue 的原型对象上。并 axios 的 http 拦截器来拦截 HTTP 的请求和响应。在 Vue 实例中使用<br><code>this.$axios()</code>。在使用 Mock 数据开发时将 baseUrl 设置为 Mock Host 即可<br><a href="http://www.itomtan.com/2017/10/17/vue-axios-timeout-retry-callback/" target="_blank" rel="noopener">axios请求超时,设置重新请求的完美解决方法 | Tomtan’s Blog</a><br><a href="https://github.com/axios/axios/issues/164#issuecomment-327837467" target="_blank" rel="noopener">Adding Retry Parameter · Issue #164 · axios/axios · GitHub</a></p>
+<h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> url = <span class="string">"api/xxx"</span></span><br><span class="line"><span class="keyword">this</span>.$axios.get(url, &#123;<span class="attr">params</span>: params&#125;).then(...)</span><br></pre></td></tr></table></figure>
+<h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$axios(&#123;</span><br><span class="line">    url: <span class="string">'/api/xxx'</span>,</span><br><span class="line">    data: data,</span><br><span class="line">    isFile: <span class="literal">true</span>,</span><br><span class="line">    method: <span class="string">'post'</span></span><br><span class="line">&#125;).then</span><br></pre></td></tr></table></figure>
+<p>在 post 请求时使用 qs 库把 data 对象做的序列化。可以在传入 config 参数中增加<code>isFile=true</code>，将不会进行序列化的操作。<br><a href="https://github.com/axios/axios#browser" target="_blank" rel="noopener">GitHub - axios/axios: Promise based HTTP client for the browser and node.js</a></p>
+<h2 id="路由管理"><a href="#路由管理" class="headerlink" title="路由管理"></a>路由管理</h2><p>编程式导航</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">  <span class="comment">// 对应 menu.js 中的 name</span></span><br><span class="line">  name: <span class="string">"routerName"</span>,</span><br><span class="line">  query: &#123;</span><br><span class="line">    page: <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="全局的消息提示框"><a href="#全局的消息提示框" class="headerlink" title="全局的消息提示框"></a>全局的消息提示框</h2><blockquote>
+<p>Element 为 Vue.prototype 添加了全局方法 $message</p>
+</blockquote>
+<p>所以在 Vue 的实例中可以这样调用 Message 消息提示组件</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$message()</span><br></pre></td></tr></table></figure>
+<h2 id="全局的弹出确认框"><a href="#全局的弹出确认框" class="headerlink" title="全局的弹出确认框"></a>全局的弹出确认框</h2><blockquote>
+<p>完整引入了 Element，它会为 Vue.prototype 添加如下全局方法：$msgbox, $alert, $confirm 和 $prompt。因此在 Vue instance 中可以采用如下的方式调用 <code>MessageBox</code>。调用参数为：</p>
+</blockquote>
+<ul>
+<li><code>$msgbox(options)</code></li>
+<li><code>$alert(message, title, options)</code> 或 <code>$alert(message, options)</code></li>
+<li><code>$confirm(message, title, options)</code> 或 <code>$confirm(message, options)</code></li>
+<li><code>$prompt(message, title, options)</code> 或 <code>$prompt(message, options)</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$confirm().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 点击确认</span></span><br><span class="line">    </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="格式化时间的工具函数"><a href="#格式化时间的工具函数" class="headerlink" title="格式化时间的工具函数"></a>格式化时间的工具函数</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">timeFormat(time, hasSecond, format = <span class="string">'-'</span>, split = <span class="string">' '</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="在路由中定义的meta-title是怎么来的？"><a href="#在路由中定义的meta-title是怎么来的？" class="headerlink" title="在路由中定义的meta.title是怎么来的？"></a>在路由中定义的<code>meta.title</code>是怎么来的？</h2><ol>
+<li>在 <code>Layout/header.vue</code> 中定义了这个标题，这个计算属性是从 Vuex 的 Store.state 中的拿出来的<code>pageTitle</code>；</li>
+<li>在 Vuex 的 Mutations 中定义了 <code>CHANGE_PAGE_TITLE</code>的 commit；</li>
+<li>然后，在 VueRouter 的<code>afterEach</code>这个阶段的钩子函数中触发这个 Commit</li>
+</ol>
+<h2 id="新增功能版块"><a href="#新增功能版块" class="headerlink" title="新增功能版块"></a>新增功能版块</h2><ul>
+<li><p>在 <code>/resources/assets/utils/menu.js</code> 中新增一个对象，将会被在<code>/Layout/menu.vue</code>中做渲染</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // 在导航栏显示的名称</span><br><span class="line">    name: '集运工单',</span><br><span class="line">    index: 'supportTickets',</span><br><span class="line">    operate: &#123;</span><br><span class="line">        // 可以是 'route' 和 'menu'</span><br><span class="line">        type: 'route',</span><br><span class="line">        // 路由跳转时传入的对象</span><br><span class="line">        data: &#123;</span><br><span class="line">            name: "SupportTicketsList",</span><br><span class="line">            // 带查询参数，变成 /supportTicketsList?page=1</span><br><span class="line">            query: &#123;</span><br><span class="line">              page: 1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 定义子选项</span><br><span class="line">    childern: []</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>resources/assets/js/utils/apiConfig.js</code> 中增加请求的 API 地址</p>
+</li>
+<li><code>resources/assets/js/router/routes.js</code> 中新增路由记录</li>
+</ul>
+<h2 id="开发表格类页面的套路"><a href="#开发表格类页面的套路" class="headerlink" title="开发表格类页面的套路"></a>开发表格类页面的套路</h2><p>把 initData 这个函数写好。</p>
+<ul>
+<li><p>先从 VueRouter 的 query 中拿表格中过滤维度的参数，先将参数值更新到组件实例的 data 中来。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">initData() &#123;</span><br><span class="line">    <span class="keyword">const</span> query = <span class="keyword">this</span>.$route.query</span><br><span class="line">    <span class="keyword">this</span>.filter.page = <span class="built_in">Number</span>(query.page)</span><br><span class="line">    <span class="keyword">this</span>.filter.keywords = query.keywords</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 有时也会根据业务逻辑需要来做一些判断。</span></span><br><span class="line">    <span class="comment">// 比如 this.filter.showTime，是时间选择组件 v-model 的值</span></span><br><span class="line">    <span class="keyword">if</span> (query.start_time) &#123;</span><br><span class="line">        <span class="keyword">this</span>.filter.showTime = [</span><br><span class="line">            <span class="keyword">new</span> <span class="built_in">Date</span>(query.start_time * <span class="number">1000</span>),</span><br><span class="line">            <span class="keyword">new</span> <span class="built_in">Date</span>(query.end_time * <span class="number">1000</span>)</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>把请求参数就是所需的过滤位置</li>
+</ul>
+<ul>
+<li><p>在跟改表格过滤维度的处理函数中，先将路由参数对象浅拷贝。再根据业务逻辑去操作这个新对象。最后重新 <code>$router.push()</code>到这个组件中来。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">handleSearch() &#123;</span><br><span class="line">    <span class="keyword">let</span> query = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="keyword">this</span>.$route.query)</span><br><span class="line">    query.page = <span class="number">1</span></span><br><span class="line">    query.keywords = <span class="keyword">this</span>.filter.keywords</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">        name: <span class="string">'ActivityList'</span>,</span><br><span class="line">        query: query</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/「香不香港」项目后台开发笔记/" class="article-date">
+  <time datetime="2018-12-13T02:34:18.000Z" itemprop="datePublished">2018-12-13</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/杂记/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Element-UI 组件使用总结/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" class="comments">
+    <div id="valine_container"></div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Fusce eget urna vitae velit <em>eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque</em> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "RJsit0ikyL55q121zCXIAuir-gzGzoHsz",
+          appKey: "XPARdd1Lo3peBXEeRqf6pYeg",
+          placeholder: "交流一下：）",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

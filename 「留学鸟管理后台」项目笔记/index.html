@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>我们的每天 | 认真一点</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="「留学鸟管理后台」项目笔记留学鸟管理平台 - 测试环境 推广员测试帐号xu@lxbird.comlxbird2018 工作人员测试帐号442966010@qq.com123456789 //.envDB_CONNECTION=mysqlDB_HOST=39.108.123.165DB_PORT=3306DB_DATABASE=shop_studyDB_USERNAME=rootDB_PASSWOR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我们的每天">
+<meta property="og:url" content="http://yoursite.com/「留学鸟管理后台」项目笔记/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="「留学鸟管理后台」项目笔记留学鸟管理平台 - 测试环境 推广员测试帐号xu@lxbird.comlxbird2018 工作人员测试帐号442966010@qq.com123456789 //.envDB_CONNECTION=mysqlDB_HOST=39.108.123.165DB_PORT=3306DB_DATABASE=shop_studyDB_USERNAME=rootDB_PASSWOR">
+<meta property="og:updated_time" content="2018-12-15T09:08:49.207Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我们的每天">
+<meta name="twitter:description" content="「留学鸟管理后台」项目笔记留学鸟管理平台 - 测试环境 推广员测试帐号xu@lxbird.comlxbird2018 工作人员测试帐号442966010@qq.com123456789 //.envDB_CONNECTION=mysqlDB_HOST=39.108.123.165DB_PORT=3306DB_DATABASE=shop_studyDB_USERNAME=rootDB_PASSWOR">
+<meta name="twitter:creator" content="@tanduzhi">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-「留学鸟管理后台」项目笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+    <div class="mobile-nav">
+      <h1 class="nickname">认真一点</h1>
+      <a id="menu">
+        &#9776; Menu
+      </a>
+    </div>
+    
+        <nav id="main-nav" class="main-nav nav-left">
+    
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      我们的每天
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h1 id="「留学鸟管理后台」项目笔记"><a href="#「留学鸟管理后台」项目笔记" class="headerlink" title="「留学鸟管理后台」项目笔记"></a>「留学鸟管理后台」项目笔记</h1><p><a href="http://admindev.lxbird.com/" target="_blank" rel="noopener">留学鸟管理平台 - 测试环境</a></p>
+<p>推广员测试帐号<br><a href="mailto:xu@lxbird.com" target="_blank" rel="noopener">xu@lxbird.com</a><br>lxbird2018</p>
+<p>工作人员测试帐号<br><a href="mailto:442966010@qq.com" target="_blank" rel="noopener">442966010@qq.com</a><br>123456789</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//.env</span><br><span class="line">DB_CONNECTION=mysql</span><br><span class="line">DB_HOST=39.108.123.165</span><br><span class="line">DB_PORT=3306</span><br><span class="line">DB_DATABASE=shop_study</span><br><span class="line">DB_USERNAME=root</span><br><span class="line">DB_PASSWORD=offerhk</span><br></pre></td></tr></table></figure>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><h3 id="样式文件"><a href="#样式文件" class="headerlink" title="样式文件"></a>样式文件</h3><p>在<code>sass</code>文件夹内管理。</p>
+<ul>
+<li><code>_public.scss</code>下是一些公共的类。比如说<code>is-border-left</code>、<code>is-text-link</code></li>
+<li><code>_variables.scss</code> 管理全局的 scss 变量，如<code>color-Blue</code></li>
+<li><code>_icon.scss</code> 管理字体图标</li>
+<li><code>_reset.scss</code> 进行浏览器样式的重置</li>
+</ul>
+<h3 id="页面组件"><a href="#页面组件" class="headerlink" title="页面组件"></a>页面组件</h3><p>在 <code>resources/assets/js/components</code> 文件夹中管理，公共组件存放在该文件夹的跟目录，某页面中的私有组件建立子文件夹。</p>
+<h3 id="页面模块"><a href="#页面模块" class="headerlink" title="页面模块"></a>页面模块</h3><p>在 <code>resources/assets/js/components</code>。</p>
+<h2 id="API-管理"><a href="#API-管理" class="headerlink" title="API 管理"></a>API 管理</h2><p>在<code>resources/assets/js/units/apiConfig.js</code>进行统一管理，用<code>GET_TASK_LIST</code>的方式命名，具体如下</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> GET_TASK_LIST = <span class="string">'/api/mission/detail'</span></span><br></pre></td></tr></table></figure>
+<h2 id="左侧-Menu-栏的管理"><a href="#左侧-Menu-栏的管理" class="headerlink" title="左侧 Menu 栏的管理"></a>左侧 Menu 栏的管理</h2><p>在 <code>resources/assets/js/units/menuConfig.js</code>下，用如下对象进行描述。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  name: <span class="string">'数据统计'</span>,</span><br><span class="line">  index: <span class="string">'Home'</span>,</span><br><span class="line">  icon: <span class="string">'icon-tongjifenxi'</span>,</span><br><span class="line">  operate: &#123;</span><br><span class="line">    type: <span class="string">'route'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      name: <span class="string">'Home'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  childern: []</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><h2 id="全局的确认提示框"><a href="#全局的确认提示框" class="headerlink" title="全局的确认提示框"></a>全局的确认提示框</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$confirm(<span class="string">`确认删除的信息？`</span>, <span class="string">'提示框标题'</span>).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 点击确认调用</span></span><br><span class="line">    <span class="keyword">this</span>.$axios(&#123;</span><br><span class="line">        url: <span class="string">'DOWN_PRODUCT'</span>,</span><br><span class="line">        method: <span class="string">'post'</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            id: info.id</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 成功删除调用</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Vue-全局的-Mixin"><a href="#Vue-全局的-Mixin" class="headerlink" title="Vue 全局的 Mixin"></a>Vue 全局的 Mixin</h2><h2 id="状态管理-Vuex"><a href="#状态管理-Vuex" class="headerlink" title="状态管理 - Vuex"></a>状态管理 - Vuex</h2><h2 id="表单校验"><a href="#表单校验" class="headerlink" title="表单校验"></a>表单校验</h2>
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/「留学鸟管理后台」项目笔记/" class="article-date">
+  <time datetime="2018-12-15T09:07:38.000Z" itemprop="datePublished">2018-12-15</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/整体一下前端的英语学习资料/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" class="comments">
+    <div id="valine_container"></div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Fusce eget urna vitae velit <em>eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque</em> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "RJsit0ikyL55q121zCXIAuir-gzGzoHsz",
+          appKey: "XPARdd1Lo3peBXEeRqf6pYeg",
+          placeholder: "交流一下：）",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

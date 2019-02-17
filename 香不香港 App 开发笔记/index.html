@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>认真一点</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="香不香港 App 开发笔记 部署开发环境测试环境地址：http://dev.offerhk.com/home/vaa  npm install  npm run dev 把http://dev.offerhk.com Local Storage 中的 /Userlogin/acquisition 的值拿到 http://localhost:8079/ 中来 使用浏览器将 Chrome 的跨域限制解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="认真一点">
+<meta property="og:url" content="http://yoursite.com/香不香港 App 开发笔记/index.html">
+<meta property="og:site_name" content="认真一点">
+<meta property="og:description" content="香不香港 App 开发笔记 部署开发环境测试环境地址：http://dev.offerhk.com/home/vaa  npm install  npm run dev 把http://dev.offerhk.com Local Storage 中的 /Userlogin/acquisition 的值拿到 http://localhost:8079/ 中来 使用浏览器将 Chrome 的跨域限制解">
+<meta property="og:image" content="https://raw.githubusercontent.com/scriptPilot/app-framework/master/media/process.png">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/7/16/164a0f71bfc278a8?imageView2/0/w/1280/h/960/ignore-error/1">
+<meta property="og:updated_time" content="2018-12-15T07:50:33.719Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="认真一点">
+<meta name="twitter:description" content="香不香港 App 开发笔记 部署开发环境测试环境地址：http://dev.offerhk.com/home/vaa  npm install  npm run dev 把http://dev.offerhk.com Local Storage 中的 /Userlogin/acquisition 的值拿到 http://localhost:8079/ 中来 使用浏览器将 Chrome 的跨域限制解">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/scriptPilot/app-framework/master/media/process.png">
+<meta name="twitter:creator" content="@tanduzhi">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-香不香港 App 开发笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+    <div class="mobile-nav">
+      <h1 class="nickname">认真一点</h1>
+      <a id="menu">
+        &#9776; Menu
+      </a>
+    </div>
+    
+        <nav id="main-nav" class="main-nav nav-left">
+    
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h1 id="香不香港-App-开发笔记"><a href="#香不香港-App-开发笔记" class="headerlink" title="香不香港 App 开发笔记"></a>香不香港 App 开发笔记</h1><p><img src="https://raw.githubusercontent.com/scriptPilot/app-framework/master/media/process.png" alt="img"></p>
+<h2 id="部署开发环境"><a href="#部署开发环境" class="headerlink" title="部署开发环境"></a>部署开发环境</h2><p>测试环境地址：<a href="http://dev.offerhk.com/home/vaa" target="_blank" rel="noopener">http://dev.offerhk.com/home/vaa</a></p>
+<ul>
+<li><code>npm install</code> </li>
+<li><code>npm run dev</code></li>
+<li>把<code>http://dev.offerhk.com</code> Local Storage 中的 <code>/Userlogin/acquisition</code> 的值拿到 <code>http://localhost:8079/</code> 中来</li>
+<li>使用浏览器将 Chrome 的跨域限制解除</li>
+<li>打开 App 的调试模式<ul>
+<li>在 Safari 中打开链接 <code>hkokapp://action/main?debug15c</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h2><h2 id="Cordova"><a href="#Cordova" class="headerlink" title="Cordova"></a>Cordova</h2><p>Cordova 是使用HTML，CSS和 JavaScript 构建混合移动应用程序的平台。应用程序中嵌入了一个名为 WebView 的网络浏览器。适合已经拥有一个 Web 应用程序，并希望尽快将其发布到应用程序商店。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/7/16/164a0f71bfc278a8?imageView2/0/w/1280/h/960/ignore-error/1" alt="webview"></p>
+<h3 id="用-JS-来和-Cordova-和原生交互的方法"><a href="#用-JS-来和-Cordova-和原生交互的方法" class="headerlink" title="用 JS 来和 Cordova 和原生交互的方法"></a>用 JS 来和 Cordova 和原生交互的方法</h3><p>调用 <code>cordova.exec</code> 来和原生的 API 交互，可使用下面的语法：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cordova.exec(<span class="function"><span class="keyword">function</span>(<span class="params">winParam</span>) </span>&#123;&#125;,</span><br><span class="line">             <span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;&#125;,</span><br><span class="line">             <span class="string">"service"</span>,</span><br><span class="line">             <span class="string">"action"</span>,</span><br><span class="line">             [<span class="string">"firstArgument"</span>, <span class="string">"secondArgument"</span>, <span class="number">42</span>, <span class="literal">false</span>]);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>这里是每个参数的工作原理：</p>
+<ul>
+<li><code>function(winParam) {}</code>： 成功回调函数。假设您 <code>exec</code> 调用成功完成，以及任何您传递给它的参数执行此函数。</li>
+<li><code>function(error) {}</code>： 错误回调函数。如果该操作未成功完成，此函数执行带有可选错误参数。</li>
+<li><code>&quot;service&quot;</code>： 要调用的原生的服务名称。</li>
+<li><code>&quot;action&quot;</code>： 要调用的原生操作名称。这通常对应于原生的方法。</li>
+<li><code>[/* arguments */]</code>： 要传递到本机环境中的参数数组。</li>
+</ul>
+</li>
+</ul>
+<p>比如下面的代码是调起原生的分享到微信的一个接口：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">shareTo(to) &#123;</span><br><span class="line">      <span class="keyword">this</span>.showLoading();</span><br><span class="line">      <span class="keyword">this</span>.to = to;</span><br><span class="line">      cordova.exec(</span><br><span class="line">        <span class="comment">// 调起成功后隐藏分享弹出框</span></span><br><span class="line">        () =&gt; &#123;<span class="keyword">this</span>.hidden();<span class="built_in">window</span>.count = <span class="number">-1</span>;&#125;,</span><br><span class="line">        () =&gt; &#123;<span class="keyword">this</span>.hidden();<span class="built_in">window</span>.count = <span class="number">-1</span>;&#125;,</span><br><span class="line">        <span class="string">"WxJsCallBack"</span>,</span><br><span class="line">        <span class="string">"sharedUrlWithBmp"</span>,</span><br><span class="line">        <span class="comment">// 传给原生接口的参数数组</span></span><br><span class="line">        [</span><br><span class="line">          <span class="keyword">this</span>.$store.state.shareInfo.link,</span><br><span class="line">          <span class="keyword">this</span>.$store.state.shareInfo.title,</span><br><span class="line">          <span class="keyword">this</span>.$store.state.shareInfo.text,</span><br><span class="line">          <span class="keyword">this</span>.$store.state.shareInfo.src,</span><br><span class="line">          to</span><br><span class="line">        ]</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="前端库和框架"><a href="#前端库和框架" class="headerlink" title="前端库和框架"></a>前端库和框架</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// package.json</span><br><span class="line">&quot;framework7&quot;: &quot;^1.6.4&quot;,</span><br><span class="line">&quot;framework7-vue&quot;: &quot;^0.9.2&quot;,</span><br></pre></td></tr></table></figure>
+<h3 id="Framework7-Vue"><a href="#Framework7-Vue" class="headerlink" title="Framework7 Vue"></a>Framework7 Vue</h3><h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><h3 id="dayjs"><a href="#dayjs" class="headerlink" title="dayjs"></a>dayjs</h3><h3 id="vue-mugen-scroll"><a href="#vue-mugen-scroll" class="headerlink" title="vue-mugen-scroll"></a>vue-mugen-scroll</h3><p>向下滑动时自动加载新内容的插件</p>
+<p>基本使用方法：</p>
+<h3 id="vue-lazyload"><a href="#vue-lazyload" class="headerlink" title="vue-lazyload"></a>vue-lazyload</h3><p>图片懒加载 vue-lazyload <a href="https://github.com/hilongjw/vue-lazyload" target="_blank" rel="noopener">https://github.com/hilongjw/vue-lazyload</a></p>
+<h2 id="REM-来做移动端的适配"><a href="#REM-来做移动端的适配" class="headerlink" title="REM 来做移动端的适配"></a>REM 来做移动端的适配</h2><p>在 <code>scss\_functions.scss</code> 中定义了一个 Scss 的单位转换的函数，可以方便的将 px 转成 rem。</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line">@function pxToRem(<span class="variable">$px</span>, <span class="variable">$base-font-size</span>: 40px) &#123;</span><br><span class="line">  @<span class="keyword">if</span> (unitless(<span class="variable">$px</span>)) &#123;</span><br><span class="line">    @return pxToRem(<span class="variable">$px</span> + 0px);</span><br><span class="line">  &#125; @<span class="keyword">else</span> if (unit(<span class="variable">$px</span>) == em) &#123;</span><br><span class="line">    @return <span class="variable">$px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  @return (<span class="variable">$px</span> / <span class="variable">$base-font-size</span>) * 1+rem;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="路由管理"><a href="#路由管理" class="headerlink" title="路由管理"></a>路由管理</h2><p>使用 f7 内置的路由管理插件，在<code>\src\router\index.js</code>中管理</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> AboutPage <span class="keyword">from</span> <span class="string">'about.vue'</span></span><br><span class="line"><span class="keyword">import</span> LoginPage <span class="keyword">from</span> <span class="string">'login.vue'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Init App</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    framework7: &#123;</span><br><span class="line">        root: <span class="string">'#app'</span>,</span><br><span class="line">        <span class="comment">// Map routes</span></span><br><span class="line">        routes: [</span><br><span class="line">            &#123;</span><br><span class="line">                path: <span class="string">'/about/'</span>,</span><br><span class="line">                component: AboutPage</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path: <span class="string">'/login/'</span>,</span><br><span class="line">                component: LoginPage</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h2><p>使用 Vuex 来管理全局的状态</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.use(Vuex);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state: &#123;</span><br><span class="line">        <span class="comment">// 所有全局的状态</span></span><br><span class="line">    &#125;,</span><br><span class="line">    mutations: &#123;</span><br><span class="line">        <span class="comment">// 在这里定义改变全局状态的函数</span></span><br><span class="line">    &#125;,</span><br><span class="line">    actions: &#123;</span><br><span class="line">        <span class="comment">// 异步的函数写这里</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="状态管理-1"><a href="#状态管理-1" class="headerlink" title="状态管理"></a>状态管理</h2><h3 id="App-内页面的跳转"><a href="#App-内页面的跳转" class="headerlink" title="App 内页面的跳转"></a>App 内页面的跳转</h3><p>commit 一个 jump 的 mutation，传入参数 <code>href</code>、<code>history</code>、<code>router</code></p>
+<ul>
+<li>href：跳转的链接地址（在 axios.js 文件中把 baseUrl 存在了全局对象 window 上，在需要跳转到 App 和 微信共用的页面时可以使用<code>window.baseUrl + href</code>）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$store.commit(<span class="string">'jump'</span>, &#123;</span><br><span class="line">    href,</span><br><span class="line">    history: <span class="keyword">this</span>.$history,</span><br><span class="line">    router: <span class="keyword">this</span>.$f7.mainView.router,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在 Vuex 的 mutation.jump 做了下面这些事情：</p>
+<p>从参数中拿到 router（F7 内置的 router 插件）调用 router.loadPage（这是 f7 提供的一个快捷方法等于<code>this.$mainView.router.load({url: &#39;xxx&#39;})</code>）</p>
+<p>如果是一个外链，router.loadPage 到 <code>/link</code> 这会<strong>跳到另一个组件 Link 再做处理</strong>。Link 组件中有一个 iframe 来打开这个外链</p>
+<p>如果是不是外链，就直接将路由跳转</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">history.pushState(&#123; from &#125;, &apos;&apos;, to);</span><br></pre></td></tr></table></figure>
+<h3 id="打开内置浏览器来跳转"><a href="#打开内置浏览器来跳转" class="headerlink" title="打开内置浏览器来跳转"></a>打开内置浏览器来跳转</h3><p>使用 cordva 来调用内置浏览器。使用方式如下：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">handleJumpOther()&#123;</span><br><span class="line">  <span class="keyword">this</span>.$store.commit(<span class="string">'jumpBorwer'</span>, &#123;</span><br><span class="line">    <span class="comment">// 告诉内置浏览器标题</span></span><br><span class="line">    title: <span class="keyword">this</span>.selectedStatus[<span class="number">0</span>].value,</span><br><span class="line">    <span class="comment">// 内置浏览器需要打开的链接地址</span></span><br><span class="line">    href: <span class="keyword">this</span>.jumpList[<span class="keyword">this</span>.selectedType.value][<span class="keyword">this</span>.selectedStatus[<span class="number">0</span>].index]</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="trigger-和-close"><a href="#trigger-和-close" class="headerlink" title="trigger 和 close"></a>trigger 和 close</h3><p>在 State 中管理了弹出框、等组件的 显示隐藏（<code>show</code>） 的状态</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// @/store/index.js</span></span><br><span class="line">state：&#123;</span><br><span class="line">    orderInfo: &#123;</span><br><span class="line">    	show: <span class="literal">false</span>,</span><br><span class="line">    	info: &#123;&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>需要显示弹框时 commit 一个 trigger 的 mutation，参数（payload）传入需要改变状态的那么弹框的字符串或者数组。比如，下面这段代码是打开【身份验证<code>noVertify</code>】的提示框：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$store.commit(<span class="string">'trigger'</span>, <span class="string">'noVertify'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="挂载到-Vue-prototype-中的函数"><a href="#挂载到-Vue-prototype-中的函数" class="headerlink" title="挂载到 Vue.prototype 中的函数"></a>挂载到 <code>Vue.prototype</code> 中的函数</h2><p>挂到 Vue 的原型对象上，在 Vue 的实例中就可以使用 <code>this.$xxx</code> 来调用。都是一些高频使用的方法。</p>
+<ul>
+<li><code>$cache</code><ul>
+<li>说明：cache.js 中封装了常用操作浏览器缓存（<code>localStroage</code> 和 <code>sessionStrange</code>）的函数。</li>
+<li>使用方法：<code>save</code>、<code>get</code>、<code>localGet</code>、<code>localSava</code> </li>
+</ul>
+</li>
+<li><code>$axios</code><ul>
+<li>用来发送 AJAX 请求</li>
+</ul>
+</li>
+<li><code>$alertLogin</code><ul>
+<li>弹出让用户登录的 Diallog，如果点击确认将跳转到登录页</li>
+</ul>
+</li>
+<li><code>$history</code><ul>
+<li><strong>看不懂啊？</strong></li>
+</ul>
+</li>
+<li><code>$preload</code><ul>
+<li>进行预加载，在 App 组件的 created 钩子中使用</li>
+</ul>
+</li>
+<li><code>$login</code><ul>
+<li>返回当前用户是否登录的状态（<code>true/false</code>）</li>
+</ul>
+</li>
+<li><code>this.$$</code><ul>
+<li>说明：Framework7 将全局函数 <code>Dom7</code> 挂载到原型中了。Framework7 这个框架为了不引用第三方的库，自己实现在类似于 jQuery 操作 DOM 的方法</li>
+<li>官方文档： <a href="https://framework7.io/docs/dom7.html" target="_blank" rel="noopener">https://framework7.io/docs/dom7.html</a></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$$(<span class="string">'.something'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    $$(<span class="keyword">this</span>).addClass(<span class="string">'hello'</span>).attr(<span class="string">'title'</span>, <span class="string">'world'</span>).insertAfter(<span class="string">'.something-else'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="注意移动端和-PC-端的差异"><a href="#注意移动端和-PC-端的差异" class="headerlink" title="注意移动端和 PC 端的差异"></a>注意移动端和 PC 端的差异</h2><p>移动端监听的应该是<code>touchend</code> 事件</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;span @touchend=<span class="string">'touchMe'</span>&gt;移动端的点击事件&lt;<span class="regexp">/span&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://codepen.io/xram/pen/GoePZV" target="_blank" rel="noopener">https://codepen.io/xram/pen/GoePZV</a></p>
+<p>在 App 首页的闲置市场板块有一个 Swiper 组件，是用 f7-swiper-slide 来做的。这里对移动端三个事件 <code>touchstart</code>、<code>touchmove</code>、<code>touchend</code> 处理</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> @<span class="attr">touchstart</span>=<span class="string">'tapStart'</span> @<span class="attr">touchend</span>=<span class="string">'secondDetail(i)'</span>&gt;</span></span><br><span class="line">    // content...</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>touchstart：当触点与触控设备表面接触时触发</p>
+<p>touchmove：当触点在触控平面上移动时</p>
+<p>touchend：当触点离开触控平面时触发</p>
+</blockquote>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>用的 Vue-Cli 搭建的项目，使用官方提供的 <code>vuejs-templates</code>为模板。配置文档：<a href="https://vuejs-templates.github.io/webpack/" target="_blank" rel="noopener">https://vuejs-templates.github.io/webpack/</a></p>
+<p>配置了一个 <code>@</code> 指向项目的 src 目录，在 import 时候更方便</p>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/香不香港 App 开发笔记/" class="article-date">
+  <time datetime="2018-12-13T06:56:56.000Z" itemprop="datePublished">2018-12-13</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/整体一下前端的英语学习资料/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/杂记/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" class="comments">
+    <div id="valine_container"></div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Fusce eget urna vitae velit <em>eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque</em> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "RJsit0ikyL55q121zCXIAuir-gzGzoHsz",
+          appKey: "XPARdd1Lo3peBXEeRqf6pYeg",
+          placeholder: "交流一下：）",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
