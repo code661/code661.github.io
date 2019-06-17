@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>认真一点</title>
+  <title>React 学习笔记 | 认真一点</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="React 学习笔记React 的诞生和 JSX 的发明写 React 的程序员他们是用来解决什么问题？根据一段传统操作 DOM 的代码，看看有什么痛点？React 的思想">
+  <meta name="description" content="React 的学习记录入职的公司有用的 React，所以要开始学习了。 React 出现的历史背景Facebook 的前端工程师傅们在写功能时遇到 BUG，他们分析传统的 Web UI 开发存在的问题：  传统 UI 操作关注太多细节 应用程序状态分散在各处，难以追踪和维护  那么 React 是如何来解决这两个问题呢？  在状态改变时 React 帮我们做整体的刷新，来解决 UI 操作关注太多细">
 <meta property="og:type" content="article">
-<meta property="og:title" content="认真一点">
+<meta property="og:title" content="React 学习笔记">
 <meta property="og:url" content="http://yoursite.com/React 学习笔记/index.html">
 <meta property="og:site_name" content="认真一点">
-<meta property="og:description" content="React 学习笔记React 的诞生和 JSX 的发明写 React 的程序员他们是用来解决什么问题？根据一段传统操作 DOM 的代码，看看有什么痛点？React 的思想">
-<meta property="og:updated_time" content="2018-12-09T03:31:55.697Z">
+<meta property="og:description" content="React 的学习记录入职的公司有用的 React，所以要开始学习了。 React 出现的历史背景Facebook 的前端工程师傅们在写功能时遇到 BUG，他们分析传统的 Web UI 开发存在的问题：  传统 UI 操作关注太多细节 应用程序状态分散在各处，难以追踪和维护  那么 React 是如何来解决这两个问题呢？  在状态改变时 React 帮我们做整体的刷新，来解决 UI 操作关注太多细">
+<meta property="og:image" content="http://yoursite.com/React%20学习笔记/media/15504028335401/Screen%20Shot%202019-01-12%20at%206.06.42%20PM.png">
+<meta property="og:image" content="http://yoursite.com/React%20学习笔记/media/15504028335401/Screen%20Shot%202019-01-12%20at%206.07.06%20PM.png">
+<meta property="og:image" content="http://yoursite.com/React%20学习笔记/media/15504028335401/2018-10-30-11-16-34.16.08.png">
+<meta property="og:image" content="http://yoursite.com/React%20学习笔记/media/15504028335401/redux_1.png">
+<meta property="og:image" content="http://yoursite.com/React%20学习笔记/media/15504028335401/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6d656469612d702e736c69642e65732f75706c6f6164732f3336343831322f696d616765732f323438343739302f415243482d5265647578322d657874656e6465642d7265616c2d6465636c657261746976652e676966.gif">
+<meta property="og:updated_time" content="2019-02-24T10:48:35.716Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="认真一点">
-<meta name="twitter:description" content="React 学习笔记React 的诞生和 JSX 的发明写 React 的程序员他们是用来解决什么问题？根据一段传统操作 DOM 的代码，看看有什么痛点？React 的思想">
+<meta name="twitter:title" content="React 学习笔记">
+<meta name="twitter:description" content="React 的学习记录入职的公司有用的 React，所以要开始学习了。 React 出现的历史背景Facebook 的前端工程师傅们在写功能时遇到 BUG，他们分析传统的 Web UI 开发存在的问题：  传统 UI 操作关注太多细节 应用程序状态分散在各处，难以追踪和维护  那么 React 是如何来解决这两个问题呢？  在状态改变时 React 帮我们做整体的刷新，来解决 UI 操作关注太多细">
+<meta name="twitter:image" content="http://yoursite.com/React%20学习笔记/media/15504028335401/Screen%20Shot%202019-01-12%20at%206.06.42%20PM.png">
 <meta name="twitter:creator" content="@tanduzhi">
   
   
@@ -55,9 +61,59 @@
     
 
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React 学习笔记
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry typo" itemprop="articleBody">
       
-        <h1 id="React-学习笔记"><a href="#React-学习笔记" class="headerlink" title="React 学习笔记"></a>React 学习笔记</h1><h2 id="React-的诞生和-JSX-的发明"><a href="#React-的诞生和-JSX-的发明" class="headerlink" title="React 的诞生和 JSX 的发明"></a>React 的诞生和 JSX 的发明</h2><h3 id="写-React-的程序员他们是用来解决什么问题？"><a href="#写-React-的程序员他们是用来解决什么问题？" class="headerlink" title="写 React 的程序员他们是用来解决什么问题？"></a>写 React 的程序员他们是用来解决什么问题？</h3><h4 id="根据一段传统操作-DOM-的代码，看看有什么痛点？"><a href="#根据一段传统操作-DOM-的代码，看看有什么痛点？" class="headerlink" title="根据一段传统操作 DOM 的代码，看看有什么痛点？"></a>根据一段传统操作 DOM 的代码，看看有什么痛点？</h4><h4 id="React-的思想"><a href="#React-的思想" class="headerlink" title="React 的思想"></a>React 的思想</h4>
+        <h1 id="React-的学习记录"><a href="#React-的学习记录" class="headerlink" title="React 的学习记录"></a>React 的学习记录</h1><p>入职的公司有用的 React，所以要开始学习了。</p>
+<h2 id="React-出现的历史背景"><a href="#React-出现的历史背景" class="headerlink" title="React 出现的历史背景"></a>React 出现的历史背景</h2><p>Facebook 的前端工程师傅们在写功能时遇到 BUG，他们分析传统的 Web UI 开发存在的问题：</p>
+<ol>
+<li>传统 UI 操作关注太多细节</li>
+<li>应用程序状态分散在各处，难以追踪和维护</li>
+</ol>
+<p>那么 React 是如何来解决这两个问题呢？</p>
+<ol>
+<li>在状态改变时 React 帮我们做整体的刷新，来解决 UI 操作关注太多细节。</li>
+<li>传统 MVC 结构有非常多的 Model 和 View，这些 Model 和 View 的使用关系错综复杂、而且是双向绑定的。React 提出了 Flux 架构（单向数据流的设计模式）</li>
+</ol>
+<h2 id="React-的思想"><a href="#React-的思想" class="headerlink" title="React 的思想"></a>React 的思想</h2><p><a href="https://jsbin.com/duseyuduxa/edit?html,js,output" target="_blank" rel="noopener">传统 DOM 操作 - JS Bin </a><br><img src="media/15504028335401/Screen%20Shot%202019-01-12%20at%206.06.42%20PM.png" alt="Screen Shot 2019-01-12 at 6.06.42 P"></p>
+<p><a href="https://jsbin.com/copoquyoji/edit?html,css,js,output" target="_blank" rel="noopener">React 的实现 - JS Bin</a><br><img src="media/15504028335401/Screen%20Shot%202019-01-12%20at%206.07.06%20PM.png" alt="Screen Shot 2019-01-12 at 6.07.06 P"></p>
+<h2 id="JSX-的本质-不是模板引擎，而是语法糖"><a href="#JSX-的本质-不是模板引擎，而是语法糖" class="headerlink" title="JSX 的本质 : 不是模板引擎，而是语法糖"></a>JSX 的本质 : 不是模板引擎，而是语法糖</h2><h2 id="React-组件间通讯"><a href="#React-组件间通讯" class="headerlink" title="React 组件间通讯"></a>React 组件间通讯</h2><p><a href="https://github.com/sunyongjian/blog/issues/27" target="_blank" rel="noopener">React组件之间的通信 · Issue #27 · sunyongjian/blog · GitHub</a></p>
+<h3 id="通过龟兔赛跑来看兄弟间通讯"><a href="#通过龟兔赛跑来看兄弟间通讯" class="headerlink" title="通过龟兔赛跑来看兄弟间通讯"></a>通过龟兔赛跑来看兄弟间通讯</h3><p><a href="https://jsbin.com/huxuvepari/1/edit?html,css,js,output" target="_blank" rel="noopener">JS Bin - 龟兔赛跑</a></p>
+<h4 id="父-→-子（App-告诉-计时器跑完的时间）"><a href="#父-→-子（App-告诉-计时器跑完的时间）" class="headerlink" title="父 → 子（App 告诉 计时器跑完的时间）"></a>父 → 子（App 告诉 计时器跑完的时间）</h4><h4 id="子-→-父（兔子告诉-App-它跑完了）"><a href="#子-→-父（兔子告诉-App-它跑完了）" class="headerlink" title="子 → 父（兔子告诉 App 它跑完了）"></a>子 → 父（兔子告诉 App 它跑完了）</h4><h4 id="爷-→-孙"><a href="#爷-→-孙" class="headerlink" title="爷 → 孙"></a>爷 → 孙</h4><h3 id="使用事件中心让任意组件通讯"><a href="#使用事件中心让任意组件通讯" class="headerlink" title="使用事件中心让任意组件通讯"></a>使用事件中心让任意组件通讯</h3><p><a href="https://jsbin.com/powegomaho/1/edit?js,output" target="_blank" rel="noopener">JS Bin - 事件中心</a><br><img src="media/15504028335401/2018-10-30-11-16-34.16.08.png" alt="2018-10-30-11-16-34.16.08"></p>
+<h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><p><img src="media/15504028335401/redux_1.png" alt="redux_1"><br><a href="https://jsbin.com/mewakozoma/1/edit?html,js,output" target="_blank" rel="noopener">JS Bin - 事件中心改成 Redux </a></p>
+<h3 id="使用-Redux-来写一个原生-JavaScript-的-Counter"><a href="#使用-Redux-来写一个原生-JavaScript-的-Counter" class="headerlink" title="使用 Redux 来写一个原生 JavaScript 的 Counter"></a>使用 Redux 来写一个原生 JavaScript 的 Counter</h3><p><a href="http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html" target="_blank" rel="noopener">Redux 入门教程（一）：基本用法 - 阮一峰的网络日志</a><br><a href="http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html" target="_blank" rel="noopener">Redux 入门教程（二）：中间件与异步操作 - 阮一峰的网络日志</a><br><a href="https://css-tricks.com/learning-react-redux/" target="_blank" rel="noopener">Leveling Up with React: Redux | CSS-Tricks</a></p>
+<h3 id="createStore方法的一个简单实现"><a href="#createStore方法的一个简单实现" class="headerlink" title="createStore方法的一个简单实现"></a>createStore方法的一个简单实现</h3><p>是不是和 eventHub 的代码很相似</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> createStore = <span class="function">(<span class="params">reducer</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> state;</span><br><span class="line">  <span class="keyword">let</span> listeners = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> getState = <span class="function"><span class="params">()</span> =&gt;</span> state;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> dispatch = <span class="function">(<span class="params">action</span>) =&gt;</span> &#123;</span><br><span class="line">    state = reducer(state, action);</span><br><span class="line">    listeners.forEach(<span class="function"><span class="params">listener</span> =&gt;</span> listener());</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> subscribe = <span class="function">(<span class="params">listener</span>) =&gt;</span> &#123;</span><br><span class="line">    listeners.push(listener);</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      listeners = listeners.filter(<span class="function"><span class="params">l</span> =&gt;</span> l !== listener);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  dispatch(&#123;&#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123; getState, dispatch, subscribe &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="理解纯函数是什么？"><a href="#理解纯函数是什么？" class="headerlink" title="理解纯函数是什么？"></a>理解纯函数是什么？</h2><p><a href="https://www.youtube.com/watch?v=sz-ZoqxPq34&amp;list=PLEHsmTsBKpKWWKs6gDQ_kssSV32UkaQNs" target="_blank" rel="noopener">NingJS · Learning design patterns from modern JavaScript frameworks, Fraser- Nanjing September 2016 - YouTube</a><br>A pure funcition is a function where the <em>reutrn value</em> is <em>only determined</em> by its input values</p>
+<h3 id="看一个-Not-pure-function"><a href="#看一个-Not-pure-function" class="headerlink" title="看一个 Not pure function"></a>看一个 Not pure function</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'jsconf china'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greeting</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	reuturn <span class="string">'Welcome to'</span> + name + <span class="string">'.'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateName</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	name = <span class="string">'phpconf china'</span></span><br><span class="line">&#125;</span><br><span class="line">updateName()</span><br><span class="line">geetting()</span><br></pre></td></tr></table></figure>
+<h2 id="改成-pure-function"><a href="#改成-pure-function" class="headerlink" title="改成 pure function"></a>改成 pure function</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">'jsconf china'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greeting</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'Welcome to '</span> + name</span><br><span class="line">&#125;</span><br><span class="line">greeting(name)</span><br></pre></td></tr></table></figure>
+<h2 id="理解-Redux-不方便的地方，上手-React-Redux"><a href="#理解-Redux-不方便的地方，上手-React-Redux" class="headerlink" title="理解 Redux 不方便的地方，上手 React-Redux"></a>理解 Redux 不方便的地方，上手 React-Redux</h2><p><a href="http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_three_react-redux.html" target="_blank" rel="noopener">Redux 入门教程（三）：React-Redux 的用法 - 阮一峰的网络日志</a><br>使用 Redux 时，在子组件访问 Store 时都需要用 Props 来往下传，在组件树层级多的时候就会很不方便了。</p>
+<h2 id="UI-组件-vs-容器组件"><a href="#UI-组件-vs-容器组件" class="headerlink" title="UI 组件 vs 容器组件"></a>UI 组件 vs 容器组件</h2><h2 id="理解-React-Redux-的-connect"><a href="#理解-React-Redux-的-connect" class="headerlink" title="理解 React-Redux 的 connect"></a>理解 React-Redux 的 <code>connect</code></h2><p>connect 它是一个高阶函数，先来看一个最普通的高阶函数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">year</span> (<span class="params">year</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">city</span>(<span class="params">city</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`Welcome to <span class="subst">$&#123;year&#125;</span> JSConf China in <span class="subst">$&#123;city&#125;</span>.`</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> time = year(<span class="number">2016</span>)</span><br><span class="line">time(<span class="string">'Nanjing'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></span><br><span class="line"><span class="keyword">const</span> VisibleApp = connect(</span><br><span class="line">  mapStateToProps,</span><br><span class="line">  mapDispatchToProps</span><br><span class="line">)(App)</span><br></pre></td></tr></table></figure>
+<p>上面代码中，connect方法接受两个参数：<code>mapStateToProps</code> 和 <code>mapDispatchToProps</code>。它们定义了 UI 组件的业务逻辑。前者负责输入逻辑，即将 <code>state</code> 映射到 UI 组件的参数（props），后者负责输出逻辑，即将用户对 UI 组件的操作映射成 Action。</p>
+<h2 id="Provider-的使用"><a href="#Provider-的使用" class="headerlink" title="Provider 的使用"></a><code>Provider</code> 的使用</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="理解为什么需要-Redux-中间件？"><a href="#理解为什么需要-Redux-中间件？" class="headerlink" title="理解为什么需要 Redux 中间件？"></a>理解为什么需要 Redux 中间件？</h2><p><img src="media/15504028335401/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6d656469612d702e736c69642e65732f75706c6f6164732f3336343831322f696d616765732f323438343739302f415243482d5265647578322d657874656e6465642d7265616c2d6465636c657261746976652e676966.gif" alt="68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6d656469612d702e736c69642e65732f75706c6f6164732f3336343831322f696d616765732f323438343739302f415243482d5265647578322d657874656e6465642d7265616c2d6465636c657261746976652e676966"></p>
+<p>中间件就是一个函数，对store.dispatch方法进行了改造，在发出 Action 和执行 Reducer 这两步之间，添加了其他功能。</p>
+<h2 id="理解为什么需要-redux-thunk-中间件"><a href="#理解为什么需要-redux-thunk-中间件" class="headerlink" title="理解为什么需要 redux-thunk 中间件"></a>理解为什么需要 redux-thunk 中间件</h2><p><a href="http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html" target="_blank" rel="noopener">Redux 入门教程（二）：中间件与异步操作 - 阮一峰的网络日志</a><br><a href="https://time.geekbang.org/course/detail/100-9453" target="_blank" rel="noopener">理解异步 Action，Redux 中间件 - 极客时间</a></p>
+<h2 id="理解-combineReducers-和-bindActionCreators-工具函数"><a href="#理解-combineReducers-和-bindActionCreators-工具函数" class="headerlink" title="理解 combineReducers 和 bindActionCreators 工具函数"></a>理解 combineReducers 和 bindActionCreators 工具函数</h2><p><a href="https://time.geekbang.org/course/detail/100-9449" target="_blank" rel="noopener">在React中使用Redux - 极客时间</a></p>
+<h2 id="理解-Redux-为什么要用「不可变数据」的设计模式"><a href="#理解-Redux-为什么要用「不可变数据」的设计模式" class="headerlink" title="理解 Redux 为什么要用「不可变数据」的设计模式"></a>理解 Redux 为什么要用「不可变数据」的设计模式</h2><p><a href="https://time.geekbang.org/course/detail/100-9455" target="_blank" rel="noopener">理解不可变数据（Immutability）- 极客时间</a><br><a href="https://youtu.be/sz-ZoqxPq34?list=PLEHsmTsBKpKWWKs6gDQ_kssSV32UkaQNs&amp;t=1512" target="_blank" rel="noopener">NingJS · Learning design patterns from modern JavaScript frameworks, Fraser- Nanjing September 2016 - YouTube</a><br><a href="http://fraserxu.me/jsconf-china-2016-talk/#30" target="_blank" rel="noopener">http://fraserxu.me/jsconf-china-2016-talk/#30</a></p>
+<ol>
+<li>可以提高性能</li>
+</ol>
+<h2 id="React-新出的-API：Hooks"><a href="#React-新出的-API：Hooks" class="headerlink" title="React 新出的 API：Hooks"></a>React 新出的 API：Hooks</h2><h2 id="React-组件的生命周期函数（钩子）"><a href="#React-组件的生命周期函数（钩子）" class="headerlink" title="React 组件的生命周期函数（钩子）"></a>React 组件的生命周期函数（钩子）</h2><p><a href="http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/" target="_blank" rel="noopener">React lifecycle methods diagram</a></p>
+<hr>
+<p><a href="https://cnodejs.org/topic/5b972808ce9d14c2254df8b0" target="_blank" rel="noopener">分享自己的 react 学习路径 - CNode技术社区</a><br><a href="https://time.geekbang.org/course/intro/100" target="_blank" rel="noopener">React实战进阶45讲 - 极客时间</a><br><a href="https://xiedaimala.com/courses/63308031-98f4-4907-ade4-c22d4aa82f27#/common" target="_blank" rel="noopener">React 入门（连载中） - 写代码啦！</a><br><a href="https://lutaonan.com/blog/react-and-the-way-building-web-ui/" target="_blank" rel="noopener">从 React 谈 Web UI 开发 - Randy’s Blog</a><br><a href="https://github.com/sunyongjian/blog/issues/36" target="_blank" rel="noopener">对 React 状态管理的理解及方案对比 · Issue #36 · sunyongjian/blog · GitHub</a><br><a href="http://www.ruanyifeng.com/blog/2016/01/flux.html" target="_blank" rel="noopener">Flux 架构入门教程 - 阮一峰的网络日志</a></p>
+
       
       
     </div>
@@ -66,7 +122,7 @@
         <li>
           <span class="label">Published Date:</span>
           <a href="/React 学习笔记/" class="article-date">
-  <time datetime="2018-12-09T03:31:55.697Z" itemprop="datePublished">2018-12-09</time>
+  <time datetime="2018-12-16T03:07:26.000Z" itemprop="datePublished">2018-12-16</time>
 </a>
 
         </li>
@@ -80,7 +136,7 @@
     
 <nav id="article-nav" class="article-nav">
   
-    <a href="/WebStorm 使用笔记/" id="article-nav-newer" class="article-nav-link-wrap newer">
+    <a href="/PHP 入门/" id="article-nav-newer" class="article-nav-link-wrap newer">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -90,9 +146,9 @@
     </a>
   
   
-    <a href="/「香不香港」深圳待寄待取功能/" id="article-nav-older" class="article-nav-link-wrap older">
+    <a href="/英语语法学习/" id="article-nav-older" class="article-nav-link-wrap older">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">英语语法学习</div>
     </a>
   
 </nav>
